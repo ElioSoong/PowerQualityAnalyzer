@@ -1,0 +1,17 @@
+﻿#ifndef FIELDLIBRARY_H
+#define FIELDLIBRARY_H
+
+#include "includes.h"
+#include "fieldlibrary_global.h"
+
+class FIELDLIBRARY_EXPORT FieldLibrary
+{
+public:
+    FieldLibrary();
+    ~FieldLibrary();
+
+private:
+
+};
+
+#endif // FIELDLIBRARY_H

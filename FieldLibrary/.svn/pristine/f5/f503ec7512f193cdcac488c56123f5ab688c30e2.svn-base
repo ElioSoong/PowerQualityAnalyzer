@@ -1,0 +1,12 @@
+﻿#include "includes.h"
+#include "FieldLibrary.h"
+
+FieldLibrary::FieldLibrary()
+{
+
+}
+
+FieldLibrary::~FieldLibrary()
+{
+
+}

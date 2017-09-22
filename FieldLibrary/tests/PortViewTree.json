@@ -1,0 +1,24 @@
+{
+    ".type": "ContainerPortView",
+    "title": "根容器",
+    "children": [
+        {
+            ".type": "ContainerPortView",
+            "title": "子容器",
+            "children": [
+                {
+                    //".type": "PortView",
+                    "portName": "Port2"
+                },
+                {
+                    //".type": "PortView",
+                    "portName": "Port3"
+                }
+            ]
+        },
+        {
+            //".type": "PortView",
+            "portName": "Port1"
+        }
+    ]
+}

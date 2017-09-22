@@ -1,0 +1,12 @@
+﻿#ifndef FIELDLIBRARY_GLOBAL_H
+#define FIELDLIBRARY_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef FIELDLIBRARY_LIB
+# define FIELDLIBRARY_EXPORT Q_DECL_EXPORT
+#else
+# define FIELDLIBRARY_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // FIELDLIBRARY_GLOBAL_H

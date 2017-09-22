@@ -1,0 +1,11 @@
+#include "ByteArrayField.h"
+
+ByteArrayField::ByteArrayField(QObject *parent)
+{
+    Q_UNUSED(parent);
+}
+
+ByteArrayField::~ByteArrayField()
+{
+
+}

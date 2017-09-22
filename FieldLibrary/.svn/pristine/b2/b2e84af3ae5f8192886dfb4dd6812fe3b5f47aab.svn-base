@@ -1,0 +1,19 @@
+#ifndef BYTEARRAYFIELD_H
+#define BYTEARRAYFIELD_H
+
+#include "IField.h"
+#include "DataField.h"
+
+class FIELDLIBRARY_EXPORT ByteArrayField : public IField
+{
+    Q_OBJECT
+
+public:
+    ByteArrayField(QObject *parent = NULL);
+    ~ByteArrayField();
+
+private:
+    
+};
+
+#endif // BYTEARRAYFIELD_H

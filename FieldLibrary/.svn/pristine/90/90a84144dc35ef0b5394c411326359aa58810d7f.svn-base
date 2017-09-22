@@ -1,0 +1,24 @@
+#include "common/IField.h"
+
+#include <gtest/gtest.h>
+#include <QtTest>
+
+namespace tst
+{
+    class tst_FieldModel : public ::testing::Test
+    {
+    protected:
+        virtual void SetUp() override
+        {
+            //qRegisterMetaType<RealField>("RealField");
+            //qRegisterMetaType<ChannelField>("ChannelField");
+        }
+
+    protected:
+    };
+
+    TEST_F(tst_FieldModel, index)
+    {
+        ASSERT_TRUE(true);
+    }
+}
