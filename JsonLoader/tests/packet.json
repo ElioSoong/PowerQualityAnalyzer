@@ -1,0 +1,602 @@
+﻿{ ".type":"PacketField", ".id":"packet", "children":[
+    { ".type":"IntegerField", ".id":"Magic" },
+    { ".type":"IntegerField", ".id":"Revision" },
+    { ".type":"IntegerField", ".id":"Size" },
+    { ".type":"IntegerField", ".id":"Checksum" },
+
+    { ".type":"IntegerField", ".id":"ElementMask" },
+    { ".type":"IntegerField", ".id":"PacketTag" },
+    { ".type":"IntegerField", ".id":"ConfigKey" },
+    { ".type":"IntegerField", ".id":"TimestampV1", "channelMask":"Total" },
+
+    { ".type":"IntegerField", ".id":"ElementType" },
+    { ".type":"IntegerField", ".id":"ElementId" },
+    { ".type":"IntegerField", ".id":"IsFlagged", "channelMask":"Total" },
+    { ".type":"IntegerField", ".id":"IsUnstable", "channelMask":"Total" },
+
+    { ".type":"DurationField", ".id":"Timestamp", "channelMask":"Total" },
+
+    { ".type":"IntegerField", ".id":"ItemCount" },
+    { ".type":"IntegerField", ".id":"Reserved2[0]" },
+
+    { ".type":"PacketItemIndexField", ".id":"Wave", "children":[
+        { ".type":"IntegerField", ".id":"ExtractMode" },
+        { ".type":"IntegerField", ".id":"ExtractReserved" },
+        { ".type":"IntegerField", ".id":"ExtractStartOffset" },
+        { ".type":"IntegerField", ".id":"ExtractEndOffset" },
+
+        { ".type":"IntegerField", ".id":"NumOfRawSamples" },
+        { ".type":"IntegerField", ".id":"NumOfWavePoints" },
+        { ".type":"IntegerField", ".id":"IsCapture" },
+        { ".type":"IntegerField", ".id":"NumOfSolidPoint" },
+        { ".type":"IntegerField", ".id":"FirstSolidPointPos" },
+        { ".type":"IntegerField", ".id":"SolidPointStep" },
+
+        { ".type":"VoltageField", ".id":"MaxUWaveData", "channelMask":"Auto|ValidN" },
+        { ".type":"VoltageField", ".id":"MinUWaveData", "channelMask":"Auto|ValidN" },
+        { ".type":"AmpereField",  ".id":"MaxIWaveData", "channelMask":"Auto|ValidN" },
+        { ".type":"AmpereField",  ".id":"MinIWaveData", "channelMask":"Auto|ValidN" },
+
+        { ".type":"IntegerField", ".id":"UWavePtr" },
+        { ".type":"IntegerField", ".id":"IWavePtr" },
+
+        { ".type":"WaveField", ".id":"Voltage", "size":"NumOfWavePoints", "channelMask":"Auto|ValidN", "children":[
+        ]},
+        { ".type":"WaveField", ".id":"Ampere", "size":"NumOfWavePoints", "channelMask":"Phase|ValidN", "children":[
+        ]}
+    ]},
+    
+    { ".type":"PacketItemIndexField", ".id":"Voltage", "children":[
+        { ".type":"VoltageField", ".id":"V rms☆", "digitals":"3", "channelMask":"Phase|N", "min":"0" },
+        { ".type":"VoltageField", ".id":"V rms△", "digitals":"3", "channelMask":"Line", "min":"0" },
+        { ".type":"VoltageField", ".id":"VDc", "digitals":"3" },
+        { ".type":"VoltageField", ".id":"VPk", "digitals":"3", "channelMask":"Auto|ValidN", "min":"0" },
+        { ".type":"VoltageField", ".id":"V rms 1-2", "digitals":"3", "channelMask":"Auto|ValidN", "min":"0" },
+        { ".type":"VoltageField", ".id":"VFund", "digitals":"3", "channelMask":"Auto|ValidN", "min":"0" },
+        { ".type":"RealField", ".id":"VCF", "digitals":"3", "channelMask":"Auto|ValidN", "min":"0", "max":"10" },
+        { ".type":"AngleField", ".id":"φV(°)", "digitals":"2", "channelMask":"Auto|ValidN" },
+        { ".type":"PercentageField", ".id":"VOverDeviation", "digitals":"1", "channelMask":"Auto" },
+        { ".type":"PercentageField", ".id":"VUnderDeviation", "digitals":"1", "channelMask":"Auto" }
+    ]},
+    
+    { ".type":"PacketItemIndexField", ".id":"Ampere", "children":[
+        { ".type":"AmpereField", ".id":"Arms", "digitals":"3", "channelMask":"Phase|ValidN", "min":"0" },
+        { ".type":"AmpereField", ".id":"AReserved", "digitals":"3" },
+        { ".type":"AmpereField", ".id":"ADc", "digitals":"3" },
+        { ".type":"AmpereField", ".id":"APk", "digitals":"3", "channelMask":"Phase|ValidN", "min":"0" },
+        { ".type":"AmpereField", ".id":"A rms 1-2", "digitals":"3", "channelMask":"Phase|ValidN", "min":"0" },
+        { ".type":"AmpereField", ".id":"AFund", "digitals":"3", "channelMask":"Phase|ValidN", "min":"0" },
+        { ".type":"RealField", ".id":"ACF", "digitals":"3", "channelMask":"Phase|ValidN", "min":"0", "max":"10" },
+        { ".type":"AngleField", ".id":"φA(°)", "digitals":"2", "channelMask":"Phase|ValidN" }
+    ]},
+    
+    { ".type":"PacketItemIndexField", ".id":"Freq", "children":[
+        { ".type":"IntegerField", ".id":"IsHzValid" },
+        { ".type":"IntegerField", ".id":"IsHz10sValid" },
+        { ".type":"FrequencyField", ".id":"Hz", "digitals":"3", "valid":"IsHzValid", "channelMask":"L1Auto" },
+        { ".type":"FrequencyField", ".id":"Hz 10s", "digitals":"3", "valid":"IsHz10sValid", "channelMask":"L1Auto" }
+    ]},
+    
+    { ".type":"PacketItemIndexField", ".id":"Power", "children":[
+        { ".type":"WattField", ".id":"W", "channelMask":"PowerAuto1|Total" },
+        { ".type":"WattField", ".id":"W fund+", "channelMask":"PowerAuto2|Total" },
+        { ".type":"WattField", ".id":"WReserved1" },
+        { ".type":"WattField", ".id":"WReserved2" },
+        
+        { ".type":"VAField", ".id":"VA", "channelMask":"PowerAuto1|Total" },
+        { ".type":"VAField", ".id":"VA fund", "channelMask":"PowerAuto2|Total" },
+        { ".type":"VAField", ".id":"VA harm", "channelMask":"PowerAuto1|Total" },
+        { ".type":"VAField", ".id":"VA unbalance", "channelMask":"Total" },
+        
+        { ".type":"VarField", ".id":"Var", "channelMask":"PowerAuto2|Total" },
+        { ".type":"VarField", ".id":"Var Reserved0" },
+        { ".type":"VarField", ".id":"Var Reserved1" },
+        { ".type":"VarField", ".id":"Var Reserved2" },
+        
+        { ".type":"RealField", ".id":"PF", "channelMask":"PowerAuto1|Total", "min":"-1", "max":"1" },
+        { ".type":"RealField", ".id":"DPF", "channelMask":"PowerAuto4", "min":"-1", "max":"1" },
+        // 只有一个PowerAuto3特殊，不需要额外写Total或N"
+        { ".type":"RealField", ".id":"Cos φ", "channelMask":"PowerAuto3", "min":"-1", "max":"1" },
+        { ".type":"RealField", ".id":"Reserved1" },
+        
+        { ".type":"PercentageField", ".id":"Eff%", "channelMask":"PowerAuto1|Total" },
+        { ".type":"RealField", ".id":"Hpol", "channelMask":"PowerAuto1|Total" },
+        
+        { ".type":"WattField", ".id":"Win", "channelMask":"Total" },
+        { ".type":"VarField", ".id":"Reserved1" },
+        { ".type":"RealField", ".id":"Reserved2" },
+        { ".type":"RealField", ".id":"Reserved3" }
+    ]},
+    
+    { ".type":"PacketItemIndexField", ".id":"Energy", "children":[
+        { ".type":"WattField", ".id":"Wh", "dimension":"Wh", "channelMask":"PowerAuto1|Total" },
+        { ".type":"VAField", ".id":"VAh", "dimension":"VAh", "channelMask":"PowerAuto1|Total" },
+        { ".type":"VarField", ".id":"Varh", "dimension":"Varh", "channelMask":"PowerAuto1|Total" },
+        { ".type":"WattField", ".id":"Wh forw", "dimension":"Wh", "channelMask":"PowerAuto1|Total" },
+        { ".type":"WattField", ".id":"Wh rev", "dimension":"Wh", "channelMask":"PowerAuto1|Total" },
+        { ".type":"RealField", ".id":"Reserved1" },
+        { ".type":"RealField", ".id":"Reserved2" },
+        { ".type":"RealField", ".id":"Reserved3" }
+    ]},
+    
+    { ".type":"PacketItemIndexField", ".id":"EnergyLoss", "children":[
+        { ".type":"WattField", ".id":"W R loss", "channelMask":"Total" },
+        { ".type":"WattField", ".id":"W Var loss", "channelMask":"Total" },
+        { ".type":"WattField", ".id":"W unb loss", "channelMask":"Total" },
+        { ".type":"WattField", ".id":"W harm loss", "channelMask":"Total" },
+        { ".type":"WattField", ".id":"W An loss", "channelMask":"Total" },
+        { ".type":"WattField", ".id":"LossW Reserved[0]" },
+        { ".type":"WattField", ".id":"LossW Reserved[1]" },
+        { ".type":"WattField", ".id":"W tot loss", "channelMask":"Total" },
+
+        { ".type":"RealField", ".id":"Cost-h R", "channelMask":"Total", "dimension":"$" },
+        { ".type":"RealField", ".id":"Cost-h Var", "channelMask":"Total", "dimension":"$" },
+        { ".type":"RealField", ".id":"Cost-h Unb", "channelMask":"Total", "dimension":"$" },
+        { ".type":"RealField", ".id":"Cost-h Harm", "channelMask":"Total", "dimension":"$" },
+        { ".type":"RealField", ".id":"Cost-h An", "channelMask":"Total", "dimension":"$" },
+        { ".type":"RealField", ".id":"Cost/h Reserved[0]" },
+        { ".type":"RealField", ".id":"Cost/h Reserved[1]" },
+        { ".type":"RealField", ".id":"Cost-h Total", "channelMask":"Total", "dimension":"$" },
+
+        { ".type":"WattField", ".id":"Wh R loss", "dimension":"Wh", "channelMask":"Total" },
+        { ".type":"WattField", ".id":"Wh Var loss", "dimension":"Wh", "channelMask":"Total" },
+        { ".type":"WattField", ".id":"Wh unb loss", "dimension":"Wh", "channelMask":"Total" },
+        { ".type":"WattField", ".id":"Wh harm loss", "dimension":"Wh", "channelMask":"Total" },
+        { ".type":"WattField", ".id":"Wh An loss", "dimension":"Wh", "channelMask":"Total" },
+        { ".type":"WattField", ".id":"LossWh Reserved[0]", "dimension":"Wh" },
+        { ".type":"WattField", ".id":"LossWh Reserved[1]", "dimension":"Wh" },
+        { ".type":"WattField", ".id":"Wh tot loss", "dimension":"Wh", "channelMask":"Total" },
+
+        { ".type":"RealField", ".id":"Cost R", "channelMask":"Total" },
+        { ".type":"RealField", ".id":"Cost Var", "channelMask":"Total" },
+        { ".type":"RealField", ".id":"Cost unb", "channelMask":"Total" },
+        { ".type":"RealField", ".id":"Cost harm", "channelMask":"Total" },
+        { ".type":"RealField", ".id":"Cost An", "channelMask":"Total" },
+        { ".type":"RealField", ".id":"Cost Reserved[0]" },
+        { ".type":"RealField", ".id":"Cost Reserved[1]" },
+        { ".type":"RealField", ".id":"Cost tot", "channelMask":"Total" }
+    ]},
+    
+    { ".type":"PacketItemIndexField", ".id":"VoltageHarmonic", "children":[
+        { ".type":"IntegerField", ".id":"SizeOfHarmonicBuffer" },
+        { ".type":"IntegerField", ".id":"NumOfValidHarmonic" },
+        { ".type":"IntegerField", ".id":"NumOfPoints" },
+        { ".type":"IntegerField", ".id":"NumOfCycles" },
+        { ".type":"RealField", ".id":"K", "channelMask":"Phase" },
+        { ".type":"IntegerField", ".id":"Reserved2[0]" },
+        { ".type":"IntegerField", ".id":"Reserved2[1]" },
+        { ".type":"IntegerField", ".id":"HarmonicPtr" },
+        { ".type":"HarmonicListField", ".id":"HarmonicList", "harmonicType":"V", "maxHarmonicOrder":"50", "children":[
+        ]}
+    ]},
+
+    { ".type":"PacketItemIndexField", ".id":"AmpereHarmonic", "children":[
+        { ".type":"IntegerField", ".id":"SizeOfHarmonicBuffer" },
+        { ".type":"IntegerField", ".id":"NumOfValidHarmonic" },
+        { ".type":"IntegerField", ".id":"NumOfPoints" },
+        { ".type":"IntegerField", ".id":"NumOfCycles" },
+        { ".type":"RealField", ".id":"K", "min":"0", "max":"1000", "channelMask":"Phase|ValidN" },
+        { ".type":"IntegerField", ".id":"Reserved2[0]" },
+        { ".type":"IntegerField", ".id":"Reserved2[1]" },
+        { ".type":"IntegerField", ".id":"HarmonicPtr" },
+        { ".type":"HarmonicListField", ".id":"HarmonicList", "harmonicType":"A", "maxHarmonicOrder":"50", "children":[
+        ]}
+    ]},
+
+    { ".type":"PacketItemIndexField", ".id":"PowerHarmonic", "children":[
+        { ".type":"IntegerField", ".id":"SizeOfHarmonicBuffer" },
+        { ".type":"IntegerField", ".id":"NumOfValidHarmonic" },
+        { ".type":"IntegerField", ".id":"NumOfPoints" },
+        { ".type":"IntegerField", ".id":"NumOfCycles" },
+        { ".type":"RealField", ".id":"K", "min":"0", "max":"1000", "channelMask":"Phase" },
+        { ".type":"IntegerField", ".id":"Reserved2[0]" },
+        { ".type":"IntegerField", ".id":"Reserved2[1]" },
+        { ".type":"IntegerField", ".id":"HarmonicPtr" },
+        { ".type":"HarmonicListField", ".id":"HarmonicList", "harmonicType":"W", "maxHarmonicOrder":"30", "children":[
+        ]}
+    ]},
+
+    { ".type":"PacketItemIndexField", ".id":"VoltageInterHarmonic", "children":[
+        { ".type":"IntegerField", ".id":"SizeOfHarmonicBuffer" },
+        { ".type":"IntegerField", ".id":"NumOfValidHarmonic" },
+        { ".type":"IntegerField", ".id":"NumOfPoints" },
+        { ".type":"IntegerField", ".id":"NumOfCycles" },
+        { ".type":"RealField", ".id":"K", "min":"0", "max":"1000" },
+        { ".type":"IntegerField", ".id":"Reserved2[0]" },
+        { ".type":"IntegerField", ".id":"Reserved2[1]" },
+        { ".type":"IntegerField", ".id":"HarmonicPtr" },
+        { ".type":"HarmonicListField", ".id":"HarmonicList", "harmonicType":"V", "maxHarmonicOrder":"50", "isInterHarmonic":"true", "children":[
+        ]}
+    ]},
+
+    { ".type":"PacketItemIndexField", ".id":"AmpereInterHarmonic", "children":[
+        { ".type":"IntegerField", ".id":"SizeOfHarmonicBuffer" },
+        { ".type":"IntegerField", ".id":"NumOfValidHarmonic" },
+        { ".type":"IntegerField", ".id":"NumOfPoints" },
+        { ".type":"IntegerField", ".id":"NumOfCycles" },
+        { ".type":"RealField", ".id":"K", "min":"0", "max":"1000" },
+        { ".type":"IntegerField", ".id":"Reserved2[0]" },
+        { ".type":"IntegerField", ".id":"Reserved2[1]" },
+        { ".type":"IntegerField", ".id":"HarmonicPtr" },
+        { ".type":"HarmonicListField", ".id":"HarmonicList", "harmonicType":"A", "maxHarmonicOrder":"50", "isInterHarmonic":"true", "children":[
+        ]}
+    ]},
+
+    { ".type":"PacketItemIndexField", ".id":"Flicker", "children":[
+        { ".type":"IntegerField", ".id":"Status" },
+        { ".type":"IntegerField", ".id":"Reserved" },
+        { ".type":"IntegerField", ".id":"NumOfIFS" },
+        { ".type":"IntegerField", ".id":"NumOfCPF" },
+
+        { ".type":"IntegerField", ".id":"IsPst1MinValid" },
+        { ".type":"IntegerField", ".id":"IsPstValid" },
+        { ".type":"IntegerField", ".id":"IsPltValid" },
+        { ".type":"IntegerField", ".id":"IsIfsValid" },
+        { ".type":"IntegerField", ".id":"IsCpfValid" },
+        { ".type":"IntegerField", ".id":"Reserved2[0]" },
+        { ".type":"IntegerField", ".id":"Reserved2[1]" },
+        { ".type":"IntegerField", ".id":"Reserved2[2]" },
+
+        { ".type":"IntegerField", ".id":"Spec" },
+        { ".type":"IntegerField", ".id":"Mask" },
+        { ".type":"IntegerField", ".id":"Reserved[0]" },
+        { ".type":"IntegerField", ".id":"Reserved[1]" },
+        { ".type":"RealField", ".id":"Pinst", "channelMask":"Auto", "min":"0", "max":"1000" },
+        { ".type":"RealField", ".id":"Pst(1min)", "channelMask":"Auto", "min":"0", "max":"10" },
+        { ".type":"RealField", ".id":"Pst", "channelMask":"Auto", "min":"0", "max":"10" },
+        { ".type":"RealField", ".id":"Plt", "channelMask":"Auto", "min":"0", "max":"10" },
+
+        { ".type":"IntegerField", ".id":"Reserved3[0]" },
+        { ".type":"IntegerField", ".id":"Reserved3[1]" }
+       
+        // Insert IFS & CPF here
+    ]},
+
+  { ".type":"PacketItemIndexField", ".id":"Phasor", "children":[
+    { ".type":"IntegerField", ".id":"PhasorType" },
+    { ".type":"FrequencyField", ".id":"Hz", "channelMask":"Total" },
+    { ".type":"IntegerField", ".id":"IsNegUnbalanceValid" },
+    { ".type":"IntegerField", ".id":"IsZeroUnbalanceValid" },
+    { ".type":"VirtualField", ".id":"Unbalance", "children":[
+      { ".type":"VoltageField", ".id":"VPos", "channelMask":"Total", "min":"0" },
+      { ".type":"VoltageField", ".id":"VNeg", "channelMask":"Total", "min":"0" },
+      { ".type":"VoltageField", ".id":"VZero", "channelMask":"Total", "min":"0" },
+
+      { ".type":"PercentageField", ".id":"VReserved" },
+      
+
+      { ".type":"AmpereField", ".id":"APos", "channelMask":"Total", "min":"0" },
+      { ".type":"AmpereField", ".id":"ANeg", "channelMask":"Total", "min":"0" },
+      { ".type":"AmpereField", ".id":"AZero", "channelMask":"Total", "min":"0" },
+
+      { ".type":"PercentageField", ".id":"AReserved" },
+
+      { ".type":"VirtualField", ".id":"Unbal(%)", "children":[
+        { ".type":"PercentageField", ".id":"VNeg", "channelMask":"Total" },
+        { ".type":"PercentageField", ".id":"VZero", "channelMask":"Total" },
+        { ".type":"PercentageField", ".id":"ANeg", "channelMask":"Total" },
+        { ".type":"PercentageField", ".id":"AZero", "channelMask":"Total" }
+      ]}
+    ]},
+    // imple array, expand it
+    { ".type":"VirtualField", ".id":"RMS", "children":[
+        { ".type":"VoltageField", ".id":"VA fund", "channelMask":"Total", "min":"0" },
+        { ".type":"AmpereField", ".id":"AA fund", "channelMask":"Total", "min":"0" },
+        { ".type":"VoltageField", ".id":"VB fund", "channelMask":"Total", "min":"0" },
+        { ".type":"AmpereField", ".id":"AB fund", "channelMask":"Total", "min":"0" },
+        { ".type":"VoltageField", ".id":"VC fund", "channelMask":"Total", "min":"0" },
+        { ".type":"AmpereField", ".id":"AC fund", "channelMask":"Total", "min":"0" }
+    ]},
+
+    { ".type":"VirtualField", ".id":"Angle", "children":[
+      { ".type":"AngleField", ".id":"VA(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"VB(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"VC(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"AA(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"AB(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"AC(°)", "channelMask":"Total" },
+
+      { ".type":"AngleField", ".id":"V-AA(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"V-AB(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"V-AC(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"Reserved", "channelMask":"Total" }
+    ]}
+
+    // Insert lines data here
+  ]},
+
+    { ".type":"PacketItemIndexField", ".id":"MainsSignaling", "children":[
+        { ".type":"VirtualField", ".id":"Signal1", "children":[
+            { ".type":"PercentageField", ".id":"Sig1%", "channelMask":"Auto|ValidN" },
+            { ".type":"VoltageField", ".id":"V3s1", "channelMask":"Auto|ValidN", "min":"0" }
+        ]},
+        { ".type":"VirtualField", ".id":"Signal2", "children":[
+            { ".type":"PercentageField", ".id":"Sig2%", "channelMask":"Auto|ValidN" },
+            { ".type":"VoltageField", ".id":"V3s2", "channelMask":"Auto|ValidN", "min":"0" }
+        ]}
+    ]},
+
+  { ".type":"PacketItemIndexField", ".id":"Event", "children":[
+    { ".type":"EventListField", ".id":"EventList" }
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"Monitor", "children":[
+    { ".type":"RealField", ".id":"Reserved[0]" },
+    { ".type":"RealField", ".id":"Reserved[1]" },
+    { ".type":"RealField", ".id":"Reserved[2]" },
+    { ".type":"RealField", ".id":"Reserved[3]" },
+    { ".type":"RealField", ".id":"Reserved[4]" },
+    { ".type":"RealField", ".id":"Reserved[5]" },
+    { ".type":"RealField", ".id":"Reserved[6]" },
+    { ".type":"RealField", ".id":"Reserved[7]" },
+
+    { ".type":"VirtualField", ".id":"Voltage", "children":[
+      { ".type":"RealField", ".id":"LowMax", "channelMask":"Auto" },
+      { ".type":"RealField", ".id":"LowMin", "channelMask":"Auto" },
+      { ".type":"PercentageField", ".id":"LowRatio", "channelMask":"Auto" },
+      { ".type":"RealField", ".id":"HighMax", "channelMask":"Auto" },
+      { ".type":"RealField", ".id":"HighMin", "channelMask":"Auto" },
+      { ".type":"PercentageField", ".id":"HighRatio", "channelMask":"Auto" }
+    ]},
+
+    { ".type":"VirtualField", ".id":"Unbalance", "children":[
+      { ".type":"RealField", ".id":"LowMax", "channelMask":"Total" },
+      { ".type":"PercentageField", ".id":"LowRatio", "channelMask":"Total" },
+      { ".type":"RealField", ".id":"HighMax", "channelMask":"Total" },
+      { ".type":"PercentageField", ".id":"HighRatio", "channelMask":"Total" }
+    ]},
+
+    { ".type":"VirtualField", ".id":"Freq", "children":[
+      { ".type":"RealField", ".id":"LowMax", "channelMask":"L1Auto" },
+      { ".type":"RealField", ".id":"LowMin", "channelMask":"L1Auto" },
+      { ".type":"PercentageField", ".id":"LowRatio", "channelMask":"L1Auto" },
+      { ".type":"RealField", ".id":"HighMax", "channelMask":"L1Auto" },
+      { ".type":"RealField", ".id":"HighMin", "channelMask":"L1Auto" },
+      { ".type":"PercentageField", ".id":"HighRatio", "channelMask":"L1Auto" }
+    ]},
+
+    { ".type":"HarmonicListField", ".id":"HarmonicListMonitor", "isMoniterType":"true", "maxHarmonicOrder":"50" , "children":[
+    ]},
+
+    { ".type":"VirtualField", ".id":"Dips", "children":[
+      { ".type":"IntegerField", ".id":"HighMax", "channelMask":"Total" },
+      { ".type":"PercentageField", ".id":"HighRatio", "channelMask":"Total" }
+    ]},
+
+    { ".type":"VirtualField", ".id":"Swells", "children":[
+      { ".type":"IntegerField", ".id":"HighMax", "channelMask":"Total" },
+      { ".type":"PercentageField", ".id":"HighRatio", "channelMask":"Total" }
+    ]},
+
+    { ".type":"VirtualField", ".id":"Interruptions", "children":[
+      { ".type":"IntegerField", ".id":"HighMax", "channelMask":"Total" },
+      { ".type":"PercentageField", ".id":"HighRatio", "channelMask":"Total" }
+    ]},
+
+    { ".type":"VirtualField", ".id":"RVC", "children":[
+      { ".type":"IntegerField", ".id":"HighMax", "channelMask":"Auto" },
+      { ".type":"PercentageField", ".id":"HighRatio", "channelMask":"Auto" }
+    ]},
+
+    { ".type":"VirtualField", ".id":"MainsSignaling1", "children":[
+      { ".type":"RealField", ".id":"LowMax", "channelMask":"Auto" },
+      { ".type":"PercentageField", ".id":"LowRatio", "channelMask":"Auto" },
+      { ".type":"RealField", ".id":"HighMax", "channelMask":"Auto" },
+      { ".type":"PercentageField", ".id":"HighRatio", "channelMask":"Auto" }
+    ]},
+
+    { ".type":"VirtualField", ".id":"MainsSignaling2", "children":[
+        { ".type":"RealField", ".id":"LowMax", "channelMask":"Auto" },
+        { ".type":"PercentageField", ".id":"LowRatio", "channelMask":"Auto" },
+        { ".type":"RealField", ".id":"HighMax", "channelMask":"Auto" },
+        { ".type":"PercentageField", ".id":"HighRatio", "channelMask":"Auto" }
+    ]},
+
+    { ".type":"VirtualField", ".id":"Flicker", "children":[
+      { ".type":"RealField", ".id":"LowMax", "channelMask":"Auto" },
+      { ".type":"PercentageField", ".id":"LowRatio", "channelMask":"Auto" },
+      { ".type":"RealField", ".id":"HighMax", "channelMask":"Auto" },
+      { ".type":"PercentageField", ".id":"HighRatio", "channelMask":"Auto" }
+    ]}
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"HcRms", "children":[
+    { ".type":"IntegerField", ".id":"SizeOfHcRmsBuffer" },
+    { ".type":"IntegerField", ".id":"NumOfValidHcRms" },
+    { ".type":"IntegerField", ".id":"IsCaptureWave" },
+    { ".type":"IntegerField", ".id":"Reserved[0]" },
+    { ".type":"IntegerField", ".id":"Reserved[1]" },
+    { ".type":"IntegerField", ".id":"Reserved[2]" },  
+    { ".type":"IntegerField", ".id":"UHcRmsPtr" },
+    { ".type":"IntegerField", ".id":"IHcRmsPtr" },
+    { ".type":"HcRmsField", ".id":"Voltage", "channelMask":"Auto|ValidN" },
+    { ".type":"HcRmsField", ".id":"Ampere", "channelMask":"Auto|ValidN" }
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"RawSample", "children":[
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrFlag", "children":[
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrWave", "children":[
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrVoltage", "children":[
+    { ".type":"VoltageField", ".id":"V rms☆", "digitals":"3", "channelMask":"Phase|N", "min":"0" },
+    { ".type":"VoltageField", ".id":"V rms△", "digitals":"3", "channelMask":"Line", "min":"0" },
+    { ".type":"VoltageField", ".id":"VDc", "digitals":"3" },
+    { ".type":"VoltageField", ".id":"VPk", "digitals":"3", "channelMask":"Auto|ValidN", "min":"0" },
+    { ".type":"VoltageField", ".id":"V rms 1-2", "digitals":"3", "channelMask":"Auto|ValidN", "min":"0" },
+    { ".type":"VoltageField", ".id":"VFund", "digitals":"3", "channelMask":"Auto|ValidN", "min":"0" },
+    { ".type":"RealField", ".id":"VCF", "digitals":"3", "channelMask":"Auto|ValidN", "min":"0", "max":"10" },
+    { ".type":"AngleField", ".id":"φV(°)", "digitals":"2", "channelMask":"Auto|ValidN" },
+    { ".type":"PercentageField", ".id":"VOverDeviation", "digitals":"1", "channelMask":"Auto" },
+    { ".type":"PercentageField", ".id":"VUnderDeviation", "digitals":"1", "channelMask":"Auto" }
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrAmpere", "children":[
+    { ".type":"AmpereField", ".id":"Arms", "digitals":"3", "channelMask":"Phase|ValidN", "min":"0" },
+    { ".type":"AmpereField", ".id":"AReserved", "digitals":"3" },
+    { ".type":"AmpereField", ".id":"ADc", "digitals":"3" },
+    { ".type":"AmpereField", ".id":"APk", "digitals":"3", "channelMask":"Phase|ValidN", "min":"0" },
+    { ".type":"AmpereField", ".id":"A rms 1-2", "digitals":"3", "channelMask":"Phase|ValidN", "min":"0" },
+    { ".type":"AmpereField", ".id":"AFund", "digitals":"3", "channelMask":"Phase|ValidN", "min":"0" },
+    { ".type":"RealField", ".id":"ACF", "digitals":"3", "channelMask":"Phase|ValidN", "min":"0", "max":"10" },
+    { ".type":"AngleField", ".id":"φA(°)", "digitals":"2", "channelMask":"Phase|ValidN" }
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrFreq", "children":[
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrPower", "children":[
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrEnergy", "children":[
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrEnergyLoss", "children":[
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrVoltageHarmonic", "children":[
+    { ".type":"IntegerField", ".id":"SizeOfHarmonicBuffer" },
+    { ".type":"IntegerField", ".id":"NumOfValidHarmonic" },
+    { ".type":"IntegerField", ".id":"NumOfPoints" },
+    { ".type":"IntegerField", ".id":"NumOfCycles" },
+    { ".type":"RealField", ".id":"K", "channelMask":"Phase" },
+    { ".type":"IntegerField", ".id":"Reserved2[0]" },
+    { ".type":"IntegerField", ".id":"Reserved2[1]" },
+    { ".type":"IntegerField", ".id":"HarmonicPtr" },
+    { ".type":"HarmonicListField", ".id":"HarmonicList", "harmonicType":"V", "maxHarmonicOrder":"50", "children":[
+    ]}
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrAmpereHarmonic", "children":[
+    { ".type":"IntegerField", ".id":"SizeOfHarmonicBuffer" },
+    { ".type":"IntegerField", ".id":"NumOfValidHarmonic" },
+    { ".type":"IntegerField", ".id":"NumOfPoints" },
+    { ".type":"IntegerField", ".id":"NumOfCycles" },
+    { ".type":"RealField", ".id":"K", "min":"0", "max":"1000", "channelMask":"Phase|ValidN" },
+    { ".type":"IntegerField", ".id":"Reserved2[0]" },
+    { ".type":"IntegerField", ".id":"Reserved2[1]" },
+    { ".type":"IntegerField", ".id":"HarmonicPtr" },
+    { ".type":"HarmonicListField", ".id":"HarmonicList", "harmonicType":"A", "maxHarmonicOrder":"50", "children":[
+    ]}
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrPowerHarmonic", "children":[
+    { ".type":"IntegerField", ".id":"SizeOfHarmonicBuffer" },
+    { ".type":"IntegerField", ".id":"NumOfValidHarmonic" },
+    { ".type":"IntegerField", ".id":"NumOfPoints" },
+    { ".type":"IntegerField", ".id":"NumOfCycles" },
+    { ".type":"RealField", ".id":"K", "min":"0", "max":"1000", "channelMask":"Phase" },
+    { ".type":"IntegerField", ".id":"Reserved2[0]" },
+    { ".type":"IntegerField", ".id":"Reserved2[1]" },
+    { ".type":"IntegerField", ".id":"HarmonicPtr" },
+    { ".type":"HarmonicListField", ".id":"HarmonicList", "harmonicType":"W", "maxHarmonicOrder":"30", "children":[
+    ]}
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrVoltageInterHarmonic", "children":[
+    { ".type":"IntegerField", ".id":"SizeOfHarmonicBuffer" },
+    { ".type":"IntegerField", ".id":"NumOfValidHarmonic" },
+    { ".type":"IntegerField", ".id":"NumOfPoints" },
+    { ".type":"IntegerField", ".id":"NumOfCycles" },
+    { ".type":"RealField", ".id":"K", "min":"0", "max":"1000" },
+    { ".type":"IntegerField", ".id":"Reserved2[0]" },
+    { ".type":"IntegerField", ".id":"Reserved2[1]" },
+    { ".type":"IntegerField", ".id":"HarmonicPtr" },
+    { ".type":"HarmonicListField", ".id":"HarmonicList", "harmonicType":"V", "maxHarmonicOrder":"50", "isInterHarmonic":"true", "children":[
+    ]}
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrAmpereInterHarmonic", "children":[
+    { ".type":"IntegerField", ".id":"SizeOfHarmonicBuffer" },
+    { ".type":"IntegerField", ".id":"NumOfValidHarmonic" },
+    { ".type":"IntegerField", ".id":"NumOfPoints" },
+    { ".type":"IntegerField", ".id":"NumOfCycles" },
+    { ".type":"RealField", ".id":"K", "min":"0", "max":"1000" },
+    { ".type":"IntegerField", ".id":"Reserved2[0]" },
+    { ".type":"IntegerField", ".id":"Reserved2[1]" },
+    { ".type":"IntegerField", ".id":"HarmonicPtr" },
+    { ".type":"HarmonicListField", ".id":"HarmonicList", "harmonicType":"A", "maxHarmonicOrder":"50", "isInterHarmonic":"true", "children":[
+    ]}
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrFlicker", "children":[
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrPhasor", "children":[
+    { ".type":"IntegerField", ".id":"PhasorType" },
+    { ".type":"FrequencyField", ".id":"Hz", "channelMask":"Total" },
+    { ".type":"IntegerField", ".id":"IsNegUnbalanceValid" },
+    { ".type":"IntegerField", ".id":"IsZeroUnbalanceValid" },
+    { ".type":"VirtualField", ".id":"Unbalance", "children":[
+      { ".type":"VoltageField", ".id":"VPos", "channelMask":"Total", "min":"0" },
+      { ".type":"VoltageField", ".id":"VNeg", "channelMask":"Total", "min":"0" },
+      { ".type":"VoltageField", ".id":"VZero", "channelMask":"Total", "min":"0" },
+
+      { ".type":"PercentageField", ".id":"VReserved" },
+
+
+      { ".type":"AmpereField", ".id":"APos", "channelMask":"Total", "min":"0" },
+      { ".type":"AmpereField", ".id":"ANeg", "channelMask":"Total", "min":"0" },
+      { ".type":"AmpereField", ".id":"AZero", "channelMask":"Total", "min":"0" },
+
+      { ".type":"PercentageField", ".id":"AReserved" },
+
+      { ".type":"VirtualField", ".id":"Unbal(%)", "children":[
+        { ".type":"PercentageField", ".id":"VNeg", "channelMask":"Total" },
+        { ".type":"PercentageField", ".id":"VZero", "channelMask":"Total" },
+        { ".type":"PercentageField", ".id":"ANeg", "channelMask":"Total" },
+        { ".type":"PercentageField", ".id":"AZero", "channelMask":"Total" }
+      ]}
+    ]},
+    // Simple array, expand it
+    { ".type":"VirtualField", ".id":"RMS", "children":[
+      { ".type":"VoltageField", ".id":"VA fund", "channelMask":"Total", "min":"0" },
+      { ".type":"AmpereField", ".id":"AA fund", "channelMask":"Total", "min":"0" },
+      { ".type":"VoltageField", ".id":"VB fund", "channelMask":"Total", "min":"0" },
+      { ".type":"AmpereField", ".id":"AB fund", "channelMask":"Total", "min":"0" },
+      { ".type":"VoltageField", ".id":"VC fund", "channelMask":"Total", "min":"0" },
+      { ".type":"AmpereField", ".id":"AC fund", "channelMask":"Total", "min":"0" }
+    ]},
+
+    { ".type":"VirtualField", ".id":"Angle", "children":[
+      { ".type":"AngleField", ".id":"VA(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"VB(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"VC(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"AA(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"AB(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"AC(°)", "channelMask":"Total" },
+
+      { ".type":"AngleField", ".id":"V-AA(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"V-AB(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"V-AC(°)", "channelMask":"Total" },
+      { ".type":"AngleField", ".id":"Reserved", "channelMask":"Total" }
+    ]}
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrMainsSignaling", "children":[
+  ]},
+    
+    { ".type":"PacketItemIndexField", ".id":"AggrEvent", "children":[
+    ]},
+    
+  { ".type":"PacketItemIndexField", ".id":"AggrMonitor", "children":[
+  ]},
+
+  { ".type":"PacketItemIndexField", ".id":"AggrRawSample", "children":[
+  ]},
+    { ".type":"VirtualField", ".id":"Inverter", "children":[
+        // @符号代表从对应的通道取数据，但是界面上不显示通道名（保持空白）
+        { ".type":"SymlinkField", ".id":"Wout", "channelMask":"@Total", "linkPath":"/pqa/packet/Power/W" },
+        { ".type":"SymlinkField", ".id":"Win", "channelMask":"@Total", "linkPath":"/pqa/packet/Power/Win" },
+        { ".type":"SymlinkField", ".id":"Eff%", "channelMask":"@Total", "linkPath":"/pqa/packet/Power/Eff%" },
+        { ".type":"SymlinkField", ".id":"Vout", "channelMask":"Line", "linkPath":"/pqa/packet/Voltage/V rms△" },
+        { ".type":"SymlinkField", ".id":"Aout", "channelMask":"Phase", "linkPath":"/pqa/packet/Ampere/Arms" },
+        { ".type":"SymlinkField", ".id":"Vin", "channelMask":"@N", "linkPath":"/pqa/packet/Voltage/V rms△" },
+        { ".type":"SymlinkField", ".id":"Ain", "channelMask":"@N", "linkPath":"/pqa/packet/Ampere/Arms" },
+        { ".type":"SymlinkField", ".id":"Hz", "channelMask":"L1Auto", "linkPath":"/pqa/packet/Freq/Hz" }
+    ]}
+]}

@@ -1,0 +1,21 @@
+{
+    ".type": "LastWidget",
+    ".id": "parent",
+    ".qchildren": [
+    	{
+    		".type": "LastWidget",
+    		".id":"child1"
+        },
+        {
+    		".type": "LastWidget",
+    		".id":"child2",
+    		".qchildren": [
+    			{
+    				".type": "LastWidget",
+    				".id":"child2_1"
+        		},
+        		{
+    				".ref": "other"
+				}]
+        }]
+}

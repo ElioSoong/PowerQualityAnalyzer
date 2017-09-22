@@ -1,0 +1,11 @@
+[
+	{
+    	".ref": "inno1",
+    	".id": "inno1_sub"
+	},
+	{
+    	".ref": "inno2",
+    	".copy": true,
+    	".id": "inno2_sub"
+	}
+]

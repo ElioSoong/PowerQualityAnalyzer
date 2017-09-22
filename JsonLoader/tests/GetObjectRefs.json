@@ -1,0 +1,19 @@
+[
+	{
+    	".type": "GetObjectRefsTest",
+    	".id":"obj",
+    	"title" : "inno",
+    	"size" : "123"
+	},
+	{
+    	".ref": "obj",
+    	".copy": true,
+    	".id" : "obj_copy",
+    	"title" : "inno_copy",
+    	"size" : "321"
+	},
+	{
+    	".ref": "obj",
+    	"size" : "567"
+	}
+]

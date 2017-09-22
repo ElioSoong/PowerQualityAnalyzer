@@ -1,0 +1,5 @@
+{
+    ".type": "GeneralTestClass",
+    "_int": "GeneralTestClass.EnumValue01 | GeneralTestClass.EnumValue02",
+    "_uint": "GeneralTestClass.EnumValue01 | GeneralTestClass.EnumValue02"
+}

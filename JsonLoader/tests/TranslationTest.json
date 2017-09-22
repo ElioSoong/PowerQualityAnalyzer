@@ -1,0 +1,12 @@
+[
+	{
+    	".type": "TranslatableLabel",
+    	".id":"label0",
+    	"text" : "`tr`inno"
+	},
+	{
+    	".type": "TranslatableLabel",
+    	".id":"label1",
+    	"text" : "一诺"
+	}
+]

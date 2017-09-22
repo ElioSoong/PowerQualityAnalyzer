@@ -1,0 +1,10 @@
+[
+	{
+    	".ref": "tests/SimpleObj.json",
+    	".id": "obj0"
+	},
+	{
+    	".ref": "`json`tests/SimpleObj.myext",
+    	".id": "obj1"
+	}
+]

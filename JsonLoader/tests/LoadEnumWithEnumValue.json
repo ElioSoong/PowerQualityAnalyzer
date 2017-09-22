@@ -1,0 +1,5 @@
+{
+    ".type": "GeneralTestClass",
+    "_enum": "GeneralTestClass.EnumValue02",
+    "_flag": "GeneralTestClass.EnumValue01 | GeneralTestClass.EnumValue02"
+}

@@ -1,0 +1,5 @@
+{
+    ".type": "BindPropertyTest",
+    ".id":"obj",
+    "property" : "`full-bind`outer.property"
+}

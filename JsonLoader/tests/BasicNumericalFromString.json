@@ -1,0 +1,13 @@
+{
+    ".type": "GeneralTestClass",
+    "_int": "1",
+    "_uint": "2",
+    "_short": "3",
+    "_ushort": "4",
+    "_char": "5",
+    "_uchar": "6",
+    "_float": "7.0",
+    "_double": "8.0",
+    //"_voidPtr": "0x12345678"
+    "_bool": "true"
+}

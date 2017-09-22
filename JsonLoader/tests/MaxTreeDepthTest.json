@@ -1,0 +1,49 @@
+{
+	".type": "NestedWidget",
+    ".id":"level1",
+    "widget":
+    {
+    	".type": "NestedWidget",
+    	".id":"level2",
+    	"widget":
+    	{
+    		".type": "NestedWidget",
+    		".id":"level3",
+    		"widget":
+    		{
+    			".type": "NestedWidget",
+    			".id":"level4",
+    			"widget":
+    			{
+    				".type": "NestedWidget",
+    				".id":"level5",
+    				"widget":
+    				{
+    					".type": "NestedWidget",
+    					".id":"level6",
+    					"widget":
+    					{
+    						".type": "NestedWidget",
+    						".id":"level7",
+    						"widget":
+    						{
+    							".type": "NestedWidget",
+    							".id":"level8",
+    							"widget":
+    							{
+    								".type": "NestedWidget",
+    								".id":"level9",
+    								"widget":
+    								{
+    									".type": "LastWidget",
+    									".id":"level10"
+    								}
+    							}
+    						}
+    					}
+    				}
+    			}
+    		}
+    	}
+    }
+}

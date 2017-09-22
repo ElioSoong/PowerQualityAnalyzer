@@ -1,0 +1,13 @@
+{
+    ".id": "root",
+    ".type": "Field",
+    ".objects": [
+    	{".type": "Field", ".id": "sharedObject1"},
+    	"tests/objectsKey2.json",
+    	"tests/objectsKey3.json",
+        {".type": "Field", ".id": "sharedObject4"}
+    ],
+    "size":"sharedObject2",
+    "valid":"sharedObject3",
+    "link": "sharedObject4"
+}

@@ -1,0 +1,11 @@
+[
+	{
+    	".type": "BindPropertyTest",
+    	".id":"obj1",
+    	"property" : "`property`obj2.property"
+	},
+	{
+    	".type": "BindPropertyTest",
+    	".id":"obj2"
+	}
+]

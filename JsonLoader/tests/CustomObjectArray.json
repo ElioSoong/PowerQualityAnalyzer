@@ -1,0 +1,17 @@
+[
+	{
+    	//".type":"PropertyClass",
+    	"size":123,
+    	"str":"hello_json"
+	},
+	{
+    	//".type":"PropertyClass",
+    	"size":789,
+    	"str":"hi_json"
+	},
+	{
+    	//".type":"PropertyClass",
+    	"size":456,
+    	"str":"bye_json"
+	}
+]

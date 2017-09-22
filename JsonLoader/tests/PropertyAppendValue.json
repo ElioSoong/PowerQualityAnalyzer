@@ -1,0 +1,19 @@
+{
+    ".type": "PropertyAppendValue",
+    ".id":"obj",
+    "list":["tests/StringList.json", "inno", "sun"],
+    "otherList":["who", "are", "you", "tests/StringList.json"],
+    "intList":["tests/IntList.json", 1, 2, 3],
+    "propertyList":["tests/CustomObjectArray.json",
+    	{
+    		//".type":"PropertyClass",
+    		"size":1087,
+    		"str":"world"
+		},
+		{
+    		//".type":"PropertyClass",
+    		"size":951,
+    		"str":"big big world"
+		}
+    ]
+}

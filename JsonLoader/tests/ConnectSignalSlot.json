@@ -1,0 +1,52 @@
+[
+	// "mySignal" : "otherObject.mySlot"
+	{
+    	".type": "ConnectSignalSlotTest",
+    	".id":"obj1",
+    	"mysignal" : "obj2.myslot"
+	},
+	{
+    	".type": "ConnectSignalSlotTest",
+    	".id":"obj2"
+	},
+	// "mySlot": "other.mySignal"
+	{
+    	".type": "ConnectSignalSlotTest",
+    	".id":"obj3",
+    	"myslot" : "obj4.mysignal"
+	},
+	{
+    	".type": "ConnectSignalSlotTest",
+    	".id":"obj4"
+	},
+	// "mySignal(int)": "other.mySlot(int)"
+	{
+    	".type": "ConnectSignalSlotTest",
+    	".id":"obj5",
+    	"othersignal(int)" : "obj6.otherslot(int)"
+	},
+	{
+    	".type": "ConnectSignalSlotTest",
+    	".id":"obj6"
+	},
+	// "mySignal()": "other.mySlot()"
+	{
+    	".type": "ConnectSignalSlotTest",
+    	".id":"obj7",
+    	"othersignal()" : "obj8.otherslot()"
+	},
+	{
+    	".type": "ConnectSignalSlotTest",
+    	".id":"obj8"
+	},
+	// "mySignal": "other.mySignal"
+	{
+    	".type": "ConnectSignalSlotTest",
+    	".id":"obj9",
+    	"mysignal" : "obj10.mysignal"
+	},
+	{
+    	".type": "ConnectSignalSlotTest",
+    	".id":"obj10"
+	}
+]

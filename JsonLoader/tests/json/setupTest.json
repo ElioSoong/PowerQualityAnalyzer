@@ -1,0 +1,497 @@
+
+{ "metaType":"SetupVirtualField", "id":"setup", "children":[
+
+  <!-- 功能设定 -->
+  { "metaType":"SetupVirtualField", "id":"functionSet", "text":"功能设定", "color":"#F22464", "selectStatus":"true", "children":[
+
+    <!-- 接线配置-->
+    { "metaType":"WiringField", "id":"wiring", "text":"Wiring",  "editorTypes":"FieldEditor.WiringEditType", "defaultText":"3φ WYE", "children":[
+      { "metaType":"EnumItem", "enumerator":"Wiring.Wiring1PhiNeutral", "texts":"1φ +NEUTRAL"},
+      { "metaType":"EnumItem", "enumerator":"Wiring.Wiring1PhiSplitPhase", "texts":"1φ Split Phase"},
+			{ "metaType":"EnumItem", "enumerator":"Wiring.Wiring3PhiWYE", "texts":"3φ WYE"},
+			{ "metaType":"EnumItem", "enumerator":"Wiring.Wiring3PhiDelta", "texts":"3φ DELTA"},
+			{ "metaType":"EnumItem", "enumerator":"Wiring.Wiring1PhiITNoNeutral", "texts":"1φ IT NO NEUTRAL"},
+			{ "metaType":"EnumItem", "enumerator":"Wiring.Wiring3PhiIT", "texts":"3φ IT"},
+			{ "metaType":"EnumItem", "enumerator":"Wiring.Wiring3PhiHighLeg", "texts":"3φ HIGH LEG"},
+			{ "metaType":"EnumItem", "enumerator":"Wiring.Wiring3PhiOpenLeg", "texts":"3φ OPEN LEG"},
+			{ "metaType":"EnumItem", "enumerator":"Wiring.Wiring2Element", "texts":"2-ELEMENT"},
+			{ "metaType":"EnumItem", "enumerator":"Wiring.Wiring2HalfElement", "texts":"2 1/2-ELEMENT"},
+			{ "metaType":"EnumItem", "enumerator":"Wiring.WiringPowerInverter", "texts":"Power Inverter"},
+			{ "metaType":"EnumItem", "enumerator":"Wiring.WiringNone", "texts":"No wiring group(Calibration mode only)"}
+    ]},
+
+    <!-- 频率配置-->
+    { "metaType":"FrequencyField", "id":"frequency", "text":"Frequency", "digitals":"0"", "dimension":"Hz", "defaultText":"50", "children":[
+      { "metaType":"customItems", "RealList":[50,60]}
+    ]},
+
+    <!-- V Star/Delta 配置-->
+
+    { "metaType":"VoltageField", "id":"vnorm", "text":"Star",  "editorTypes":"FieldEditor.ListCtrlCustom", "digitals":"0", "dimension":"V", "defaultText":", "children":[120 V", "children":[
+      { "metaType":"customItems", "RealList":[58,100,115,120,133,139,200,230,277,347,400,440]}
+    ]},
+
+    { "metaType":"VoltageField", "id":"vnorm", "text":"Delta", "defaultText":"209", "editorTypes":"FieldEditor.ListCtrlCustom", "digitals":"0", "dimension":"V", "children":[
+      { "metaType":"customItems", "RealList":[100,173,199,209,230,240,346,398,480,600,693,762]}
+    ]},
+
+    <!-- 缩放比例列表配置 -->
+    { "metaType":"SetupVirtualField", "id":"scalingSet", "text":"Scaling", "children":[
+
+      { "metaType":"FractionField", "id":"clampPhase", "text":"Clamp Phase", "dimension":"mV/A", "editorTypes":"FieldEditor.ScaleListType", "defaultText":"1000:1"},
+      { "metaType":"FractionField", "id":"clampNeutral", "text":"Clamp Neutral", "dimension":"mV/A", "editorTypes":"FieldEditor.UnDoType", "defaultText":"1000:1"},
+
+      { "metaType":"AmpereField", "id":"ARangePhase", "text":"A Range Phase", "digitals":"0", "dimension":"A", "defaultText":"3000", "editorTypes":"FieldEditor.UnDoType"},
+      { "metaType":"AmpereField", "id":"ARangeNeutral", "text":"A Range Neutral", "digitals":"0", "dimension":"A", "defaultText":"3000", "editorTypes":"FieldEditor.UnDoType"},
+
+      { "metaType":"FractionField", "id":"VRatioPhase", "text":"V Ratio Phase", "editorTypes":"FieldEditor.UnDoType", "defaultText":"1:1"},
+      { "metaType":"FractionField", "id":"VRatioNeutral", "text":"V Ratio Neutral", "editorTypes":"FieldEditor.UnDoType", "defaultText":"1:1"},
+
+      { "metaType":"FractionField", "id":"ARatioPhase", "text":"A Ratio Phase", "editorTypes":"FieldEditor.UnDoType", "defaultText":"1:1"},
+      { "metaType":"FractionField", "id":"ARatioNeutral", "text":"A Ratio Neutral", "editorTypes":"FieldEditor.UnDoType", "defaultText":"1:1"}
+
+    ]}
+  ]},
+
+  <!-- 基础设定 -->
+  { "metaType":"SetupVirtualField", "id":"basicSet", "text":"基础设定", "color":"#279BF2", "children":[
+
+    <!-- Scope Scale设定 -->
+    { "metaType":"SetupVirtualField", "id":"scopScale", "text":"Scope Scale", "children":[
+      { "metaType":"SetupVirtualField", "id":"voltageSet", "text":"Voltage", "children":[
+
+        { "metaType":"VoltageField", "id":"phase", "text":"Phase", "min":"10.0", "max":"1000.0", "digitals":"1", "dimension":"V" },
+
+        { "metaType":"VoltageField", "id":"neutral", "text":"Neutral", "min":"10.0", "max":"1000.0", "digitals":"1", "dimension":"V" }
+
+      ]},
+      { "metaType":"SetupVirtualField", "id":"currentSet", "text":"Current", "children":[
+
+        { "metaType":"AmpereField", "id":"phase", "text":"Phase", "min":"10.0", "max":"4000.0", "digitals":"1", "dimension":"A" },
+
+        { "metaType":"AmpereField", "id":"neutral", "text":"Neutral", "min":"10.0", "max":"4000.0", "digitals":"1", "dimension":"A" }
+
+      ]}
+    ]},
+
+    <!-- Trend设定 -->
+    { "metaType":"SetupVirtualField", "id":"trendSet", "text":"Trend", "children":[
+
+      { "metaType":"DurationField", "id":"defaultDuration", "text":"Default Duration", "editorTypes":"FieldEditor.ListCtrlType", "defaultText":"7d", "children":[
+        { "metaType":"customItemTexts", "StringList":["1h","2h","4h","8h","16h","2d","7d","30d","3m","6m","12m","Max"]}
+      ]},
+
+      { "metaType":"DurationField", "id":"averageTime", "text":"Average Time", "editorTypes":"FieldEditor.ListCtrlType", "defaultText":"1s", "children":[
+      	{ "metaType":"customItemTexts", "StringList":["0.25s","0.5s","1s","3s","5s","10s","30s","1min","5min","10min","15min","30min","1h","2d"]}
+      ]},
+
+      { "metaType":"IntegerField", "id":"startDelay", "text":"Start Delay", "min":"10", "max":"999", "dimension":"s" },
+
+      { "metaType":"SetupVirtualField", "id":"scaleSet", "text":"Scale", "children":[
+        { "metaType":"BoolField", "id":"auto", "text":"Auto", "defaultText":"ON", "children":[
+          { "metaType":"customItemTexts", "StringList":["OFF","ON"]}
+        ]},
+
+        { "metaType":"VoltageField", "id":"vrmsOffsetPhase", "text":"Vrms Offset Phase", "min":"0", "max":"1000", "digitals":"1", "dimension":"V" },
+
+        { "metaType":"VoltageField", "id":"vrmsOffsetNeutral", "text":"Vrms Offset Neutral", "min":"0", "max":"1000", "digitals":"1", "dimension":"V" },
+
+        { "metaType":"VoltageField", "id":"vrmsSpanPhase", "text":"Vrms Span Phase", "min":"0", "max":"1000", "digitals":"1", "dimension":"V" },
+
+        { "metaType":"VoltageField", "id":"vrmsSpanNeutral", "text":"Vrms Span Neutral", "min":"0", "max":"1000", "digitals":"1", "dimension":"V" }
+
+      ]}
+    ]},
+
+    <!-- Harmonics设定 -->
+    { "metaType":"SetupVirtualField", "id":"harmonicSet", "text":"Harmonics", "children":[
+      { "metaType":"HarmonicValueField", "id":"scale", "text":"scale", "defaultText":"%f", "children":[
+        { "metaType":"EnumItem", "enumerator":"HarmonicValueF", "texts":"%f"},
+        { "metaType":"EnumItem", "enumerator":"HarmonicValueR", "texts":"%r"},
+        { "metaType":"EnumItem", "enumerator":"HarmonicValueRMS", "texts":"rms" }
+      ]},
+
+      { "metaType":"BoolField", "id":"interharmonics", "text":"Interharmonics", "defaultText":"OFF", "children":[
+        { "metaType":"customItemTexts", "StringList":["OFF","ON"]}
+      ]},
+      { "metaType":"IntegerField", "id":"THD", "text":"THD", "defaultText":"40", "children":[
+        { "metaType":"customItems", "IntegerList":[40,50]}
+      ]},
+      { "metaType":"HarmonicCalcField", "id":"kFactorMethod", "text":"K-Factor Method", "defaultText":"US", "children":[
+        { "metaType":"EnumItem", "enumerator":"HarmonicKCalcUS", "texts":"US" },
+        { "metaType":"EnumItem", "enumerator":"HarmonicKCalcEU", "texts":"EU" }
+      ]},
+
+      { "metaType":"RealField", "id":"EUkFactorpar_e", "text":"EU K-Factor par.e", "min":"0.00", "max":"0.20", "digitals":"2", "defaultText":"0.10", "step":"0.05"},
+      { "metaType":"RealField", "id":"EUkFactorpar_q", "text":"EU K-Factor par.q", "min":"1.00", "max":"2.00", "digitals":"2", "step":"0.05", "defaultText":"1.70"}
+    ]},
+
+    <!-- Dip & Swells设定 -->
+    { "metaType":"SetupVirtualField", "id":"dipSwellSet", "text":"Dip Swells", "children":[
+      { "metaType":"EventTypeField", "id":"reference", "text":"Reference", "defaultText":"Norminal", "children":[
+        { "metaType":"EnumItem", "enumerator":"PqaEventRefVnom", "texts":"Norminal" },
+        { "metaType":"EnumItem", "enumerator":"PqaEventRefSlidingVoltage", "texts":"Sliding" }
+      ]}
+    ]},
+
+    <!-- Fliker设定 -->
+    { "metaType":"SetupVirtualField", "id":"flikerSet", "text":"Fliker", "children":[
+      { "metaType":"FlickerLampField", "id":"lampModel", "text":"Lamp Model", "defaultText":"60Hz 120V", "children":[
+        { "metaType":"EnumItem", "enumerator":"FlickerLamp60Hz120V", "texts":"60Hz 120V"},
+        { "metaType":"EnumItem", "enumerator":"FlickerLamp50Hz230V", "texts":"50Hz 230V"}
+      ]}
+    ]},
+
+    <!-- Phasor设定 -->
+    { "metaType":"SetupVirtualField", "id":"phasorSet", "text":"Phasor", "children":[
+      { "metaType":"PhasorDirectionField", "id":"clockWise", "text":"Clockwise", "defaultText":"Neg", "children":[
+        { "metaType":"EnumItem", "enumerator":"PhasorNegative", "texts":"Neg" },
+        { "metaType":"EnumItem", "enumerator":"PhasorPositive", "texts":"Pos" }
+      ]}
+    ]},
+
+    <!-- Power设定 -->
+    { "metaType":"SetupVirtualField", "id":"powerSet", "text":"Power", "children":[
+      { "metaType":"CalcTypeField", "id":"method", "text":"Method", "defaultText":"Unified", "children":[
+      	{ "metaType":"EnumItem", "enumerator":"PqaPowerCalcUnified", "texts":"Unified" },
+      	{ "metaType":"EnumItem", "enumerator":"PqaPowerCalcClassic", "texts":"Classic" },
+      	{ "metaType":"EnumItem", "enumerator":"PqaPowerCalcIEEE", "texts":"IEEE" }
+      ]},
+
+      { "metaType":"PowerShowField", "id":"display", "text":"Display", "defaultText":"DPF", "children":[
+      	{ "metaType":"EnumItem", "enumerator":"PqaPowerShowDPF", "texts":"DPF" },
+      	{ "metaType":"EnumItem", "enumerator":"PqaPowerShowCosPhi", "texts":"Cosφ"}
+      ]}
+    ]},
+
+    <!-- Cycle Aggrega设定 -->
+    { "metaType":"SetupVirtualField", "id":"cycleAggregaSet", "text":"Cycle Aggrega", "children":[
+      { "metaType":"AggregationModeField", "id":"interval", "text":"Interval", "defaultText":"10,12 cycles", "children":[
+      	{ "metaType":"EnumItem", "enumerator":"Aggr10_12T", "texts":"10,12 cycles"},
+      	{ "metaType":"EnumItem", "enumerator":"Aggr150_180T", "texts":"150,180 cycles"}
+      ]}
+    ]},
+
+    <!-- Wave Capture设定 -->
+    { "metaType":"SetupVirtualField", "id":"waveCaptureSet", "text":"Wave Capture", "children":[
+
+      { "metaType":"VoltageField", "id":"transientsTriggerLevel", "text":"Transients TriggerLevel", "min":"0", "max":"1400", "digitals":"0", "dimension":"V", "defaultText":"100", "step":"1" },
+
+      { "metaType":"AmpereField", "id":"AmpsTriggerLevel", "text":"Amps TriggerLevel", "min":"1", "max":"3000", "digitals":"0", "dimension":"A", "defaultText":"150", "step":"1" },
+
+      { "metaType":"TriggerField", "id":"trigerOn", "text":"Trigger on", "editorTypes":"FieldEditor.MultiselectCtrlType", "defaultText":"Voltage Transient | Voltage Swell | Voltage Dip | Rapid Voltage Change | Voltage Interruption", "children":[
+      	{ "metaType":"EnumItem", "enumerator":"WaveCapTrigOnTransients", "texts":"Voltage Transient"},
+      	{ "metaType":"EnumItem", "enumerator":"WaveCapTrigOnSwells", "texts":"Voltage Swell"},
+      	{ "metaType":"EnumItem", "enumerator":"WaveCapTrigOnDips", "texts":"Voltage Dip"},
+      	{ "metaType":"EnumItem", "enumerator":"WaveCapTrigOnRVC", "texts":"Rapid Voltage Change"},
+      	{ "metaType":"EnumItem", "enumerator":"WaveCapTrigOnInterrupts", "texts":"Voltage Interruption"},
+      	{ "metaType":"EnumItem", "enumerator":"WaveCapTrigOnAMPS", "texts":"AMPS" }
+      ]}
+    ]},
+
+    <!-- Inrush设定 -->
+    { "metaType":"SetupVirtualField", "id":"inrushSet", "text":"Inrush", "children":[
+      { "metaType":"DurationField", "id":"duration", "text":"Duration", "editorTypes":"FieldEditor.ListCtrlType", "defaultText":"1m", "children":[
+        { "metaType":"customItemTexts", "StringList":["1m","2m","4m","12m","20m","45m"]}
+      ]},
+
+      { "metaType":"AmpereField", "id":"AmpsNominal", "text":"Amps Nominal", "min":"1", "max":"3000", "digitals":"0", "dimension":"A", "defaultText":"750", "step":"1" },
+
+      { "metaType":"PercentageField", "id":"threshold", "text":"Threshold", "min":"1", "max":"1000", "defaultText":"200" },
+
+      { "metaType":"PercentageField", "id":"hysteresis", "text":"Hysteresis", "min":"1", "max":"200", "defaultText":"2" }
+    ]},
+
+    <!-- Rapid Change设定 -->
+    { "metaType":"SetupVirtualField", "id":"rapidChangeSet", "text":"Rapid Change", "children":[
+
+      { "metaType":"DurationField", "id":"steadyTime", "text":"Steady Time", "min":"500", "max":"10000", "step":"500", "defaultText":"1s" },
+
+      { "metaType":"PercentageField", "id":"voltageTolerance", "text":"Voltage Tolerance", "min":"0", "max":"100", "defaultText":"0.1"},
+
+      { "metaType":"PercentageField", "id":"minimumStep", "text":"Minimum Step", "min":"0.0", "max":"100.0", "digitals":"1", "defaultText":"5.0"},
+
+      { "metaType":"DetectModeField", "id":"detectOn", "text":"Detect on", "defaultText":"Vstep", "children":[
+      	{ "metaType":"EnumItem", "enumerator":"RvcDetectOnVStep", "texts":"Vstep" },
+      	{ "metaType":"EnumItem", "enumerator":"RvcDetectOnVMax", "texts":"Vmax" }
+      ]}
+    ]},
+
+    <!-- Energy Loss设定 -->
+    { "metaType":"SetupVirtualField", "id":"energyLossSet", "text":"Energy Loss", "children":[
+      { "metaType":"SetupVirtualField", "id":"cableSet", "text":"Cable", "children":[
+        { "metaType":"BoolField", "id":"automatic", "text":"Automatic", "defaultText":"OFF", "children":[
+          { "metaType":"customItemTexts", "StringList":["OFF","ON"]}
+        ]},
+        { "metaType":"IntegerField", "id":"length", "text":"Length", "min":"0", "max":"1000000", "defaultText":"100", "step":"1" },
+        { "metaType":"LengthTypeField", "id":"lengthUnit", "text":"Length Unit", "defaultText":"m", "children":[
+        	{ "metaType":"EnumItem", "enumerator":"CabelLengthMeter", "texts":"m" },
+        	{ "metaType":"EnumItem", "enumerator":"CabelLengthFeet", "texts":"feet" }
+        ]},
+        { "metaType":"RealField", "id":"area", "text":"Area",  "min":"1.5", "max":"400", "defaultText":"2.5", "step":"0.5"},
+        { "metaType":"DiameterTypeField", "id":"diameter", "text":"Diameter", "defaultText":"mm2", "children":[
+        	{ "metaType":"EnumItem", "enumerator":"CabelDiameterMM2", "texts":"mm2" },
+        	{ "metaType":"EnumItem", "enumerator":"CabelDiameterAWG", "texts":"AWG" }
+        ]},
+        { "metaType":"MaterialTypeField", "id":"material", "text":"Material", "defaultText":"Cu", "children":[ 
+        	{ "metaType":"EnumItem", "enumerator":"CabelMaterialCu", "texts":"Cu" },
+        	{ "metaType":"EnumItem", "enumerator":"CabelMaterialAl", "texts":"Al" }
+        ]}
+      ]},
+
+      { "metaType":"SetupVirtualField", "id":"rate1Set", "text":"Rate[1]", "children":[
+        { "metaType":"IntegerField", "id":"startTime", "text":"Start Time", "min":"0", "max":"24", "step":"1" },
+        { "metaType":"RealField", "id":"tariff", "text":"Tariff",  "min":"0.0000", "max":"99.9999", "digitals":"4", "dimension":"$", "step":"1", "defaultText":"1" },
+      ]},
+
+      { "metaType":"SetupVirtualField", "id":"rate2Set", "text":"Rate[2]", "children":[
+        { "metaType":"IntegerField", "id":"startTime", "text":"Start Time", "min":"0", "max":"24", "step":"1" },
+        { "metaType":"RealField", "id":"tariff", "text":"Tariff",  "min":"0.0000", "max":"99.9999", "digitals":"4", "dimension":"$", "step":"1", "defaultText":"1" },
+      ]},
+
+      { "metaType":"SetupVirtualField", "id":"rate3Set", "text":"Rate[3]", "children":[
+        { "metaType":"IntegerField", "id":"startTime", "text":"Start Time", "min":"0", "max":"24", "step":"1" },
+        { "metaType":"RealField", "id":"tariff", "text":"Tariff",  "min":"0.0000", "max":"99.9999", "digitals":"4", "dimension":"$", "step":"1", "defaultText":"1" },
+      ]},
+
+      { "metaType":"SetupVirtualField", "id":"rate4Set", "text":"Rate[4]", "children":[
+        { "metaType":"IntegerField", "id":"startTime", "text":"Start Time", "min":"0", "max":"24", "step":"1" },
+        { "metaType":"RealField", "id":"tariff", "text":"Tariff",  "min":"0.0000", "max":"99.9999", "digitals":"4", "dimension":"$", "step":"1", "defaultText":"1" },
+      ]}
+    ]}
+  ]},
+
+  <!-- 用户偏好 -->
+  { "metaType":"SetupVirtualField", "id":"userPreferenceSet", "text":"用户偏好", "color":"#96A4A4", "children":[
+
+    <!-- Factory Default -->
+    { "metaType":"StringField", "id":"factoryDefault", "text":"Factory Defaults", "notifySlot":"setFactoryDefault", "defaultText":"Cancel", "children":[
+      { "metaType":"customItems", "StringList":["Cancel","Continue"]}
+    ]},
+
+    <!-- Demo -->
+    { "metaType":"BoolField", "id":"demo", "text":"Demo", "notifySlot":"setDemoMode", "defaultText":"OFF", "children":[
+      { "metaType":"customItemTexts", "StringList":["OFF","ON"]},
+    ]},
+
+    { "metaType":"IntegerField", "id":"contract", "text":"Contract", "min":"1", "max":"100", "defaultText":"50", "notifySlot":"setContract" },
+
+    <!-- Formate SD Card -->
+    { "metaType":"StringField", "id":"formateSDCard", "text":"Formate SD Card", "notifySlot":"formatSdCard", "defaultText":"Cancel", "children":[
+      { "metaType":"customItems", "StringList":["Cancel","Continue"]}
+    ]},
+
+    <!-- Language -->
+    { "metaType":"StringField", "id":"language", "text":"Language", "editorTypes":"FieldEditor.LanguageEditType", "notifySlot":"setLanguage", "defaultText":"English", "children":[
+    	{ "metaType":"customItemTexts", "StringList":["English","Chinese","English","Chinese","English","Chinese","English","Chinese","English","Chinese","English","Chinese"]}
+    ]},
+
+    <!-- Phase Identifiication -->
+    { "metaType":"PhaseidSpecField", "id":"phaseIdentification", "text":"Phase Identification", "notifySlot":"setPhaseDisplayParams", "defaultText":"A,B,C", "children":[
+    	{ "metaType":"EnumItem", "enumerator":"PhaseidL1L2L3", "texts":"L1,L2,L3"},
+    	{ "metaType":"EnumItem", "enumerator":"PhaseidABC", "texts":"A,B,C"}
+    ]},
+
+    <!-- Phase Color -->
+    <!-- 此处的两个notifySlot都不能删除 CHENHONGHAO 2015/12/09 -->
+    { "metaType":"PhaseColorGroupField", "id":"phaseColor", "text":"Phase Color", "editorTypes":"FieldEditor.PhaseEditType", "notifySlot":"setPhaseDisplayParams", "defaultText":"US DEFAULT", "children":[
+    	{ "metaType":"EnumItem", "enumerator":"PhaseColorUS", "texts":"US DEFAULT"},
+    	{ "metaType":"EnumItem", "enumerator":"PhaseColorUK", "texts":"UK DEFAULT"},
+    	{ "metaType":"EnumItem", "enumerator":"PhaseColorEU", "texts":"EU DEFAULT"},
+    	{ "metaType":"EnumItem", "enumerator":"PhaseColorHD", "texts":"HD 308 S2 DEFAULT"},
+    	{ "metaType":"EnumItem", "enumerator":"PhaseColorCustom", "texts":"CUSTOM" }
+    ]},
+
+    <!-- Time -->
+    { "metaType":"SetupVirtualField", "id":"timeSet", "text":"Time", "children":[
+      { "metaType":"IntegerField", "id":"time", "text":"Date Time", "editorTypes":"FieldEditor.DateTimeEditType", "notifySlot":"setSystemTime"]},
+      <!-- GPS -->
+      { "metaType":"BoolField", "id":"gps", "text":"GPS", "notifySlot":"setGPS", "defaultText":"OFF", "children":[
+        { "metaType":"customItemTexts", "StringList":["OFF","ON"]}
+      ]}
+    ]},
+
+    <!-- RS232 -->
+    { "metaType":"SetupVirtualField", "id":"rs232Set", "text":"RS232", >
+      { "metaType":"IntegerField", "id":"baudrate", "text":"Baudrate", "editorTypes":"FieldEditor.ListCtrlType", "notifySlot":"setBaudrate", "defaultText":"460800", "children":[
+        { "metaType":"customItems", "IntegerList":[1200,2400,9600,19200,38400,57600,115200,230400,460800]}
+      ]}
+    ]},
+
+    <!-- Display Auto OFF -->
+    { "metaType":"DurationField", "id":"displayAutoOffSet", "text":"Display Auto OFF", "notifySlot":"setDisplayAutoOff", "defaultText":"Disable", "children":[
+      { "metaType":"customItemTexts", "StringList":["5min","15min","30min","Disable"]}
+    ]},
+
+    <!-- User ID -->
+    { "metaType":"SetupVirtualField", "id":"userIDSet", "text":"User ID", "children":[
+
+      { "metaType":"StringField", "id":"owner", "text":"Owner", "editorTypes":"FieldEditor.LableType", "defaultText":"Eric" },
+
+
+      { "metaType":"StringField", "id":"address", "text":"Address", "editorTypes":"FieldEditor.LableType", "defaultText":"ShangHai" },
+
+
+      { "metaType":"StringField", "id":"site", "text":"Site", "editorTypes":"FieldEditor.LableType", "defaultText":"****"}
+
+    ]}
+
+  ]},
+
+  <!-- 限值设定 -->
+  { "metaType":"SetupVirtualField", "id":"limiteSet", "text":"限值设定", "color":"#68E100", "children":[
+
+    <!-- Voltage -->
+    { "metaType":"SetupVirtualField", "id":"voltageSet", "text":"Voltage", "children":[
+
+      { "metaType":"VoltageField", "id":"nominalVoltageStar", "text":"Nominal Voltage Star", "min":"440", "max":"440", "defaultText":"440", "dimension":"V", "step":"0" },
+
+      { "metaType":"VoltageField", "id":"nominalVoltageDelta", "text":"Nominal Voltage Delta", "min":"440", "max":"440", "defaultText":"762", "dimension":"V", "step":"0" },
+
+      { "metaType":"PercentageField", "id":"limit1NotExceeding", "text":"Limit1> Not exceeding probability", "min":"0.0", "max":"100", "defaultText":"95.0"},
+
+      { "metaType":"PercentageField", "id":"limit1UpperLimit", "text":"Limit1> Upper Limit", "min":"0.0", "max":"100.0", "defaultText":"10.0"},
+
+      { "metaType":"PercentageField", "id":"limit1LowerLimit", "text":"Limit1> Lower Limit", "min":"-100.0", "max":"-0.0", "defaultText":"-10.0"},
+
+      { "metaType":"PercentageField", "id":"limit2NotExceeding", "text":"Limit2> Not exceeding probability", "min":"100.0", "max":"100.0", "defaultText":"100" },
+
+      { "metaType":"PercentageField", "id":"limit2UpperLimit", "text":"Limit2> Upper Limit", "min":"0.0", "max":"100.0", "defaultText":"10.0"},
+
+      { "metaType":"PercentageField", "id":"limit2LowerLimit", "text":"Limit2> Lower Limit", "min":"-100.0", "max":"-0.0", "defaultText":"-15.0"}
+
+    ]},
+
+    <!-- Harmonics -->
+    { "metaType":"SetupVirtualField", "id":"harmonicsSet", "text":"Harmonics", "children":[
+      { "metaType":"HarmonicOrderField", "id":"order", "text":"Order", "min":"1", "max":"50", "step":"1", "defaultText":"2", "editorTypes":"HarmonicLimitEditType" },
+      { "metaType":"HarmonicLimitPercentageField", "id":"limit1NotExceeding", "text":"Limit1> Not exceeding probability", "min":"0.0", "max":"100", "defaultText":"95.0", "editorTypes":"UnDoType" },
+      { "metaType":"HarmonicLimitPercentageField", "id":"limit1UpperLimit", "text":"Limit1> Upper Limit", "min":"0.0", "max":"100.0", "defaultText":"1.0", "editorTypes":"UnDoType" },
+      { "metaType":"HarmonicLimitPercentageField", "id":"limit2NotExceeding", "text":"Limit2> Not exceeding probability", "min":"100", "max":"100", "defaultText":"100.0", "editorTypes":"UnDoType" },
+      { "metaType":"HarmonicLimitPercentageField", "id":"limit2UpperLimit", "text":"Limit2> Upper Limit", "min":"0.0", "max":"100.0", "defaultText":"10", "editorTypes":"UnDoType" }
+    ]},
+
+    <!-- Flicker -->
+    { "metaType":"SetupVirtualField", "id":"flickerSet", "text":"Flicker", "children":[
+
+      { "metaType":"PercentageField", "id":"limit1NotExceeding", "text":"Limit1> Not exceeding probability", "min":"0.0", "max":"100", "defaultText":"95.0"},
+
+      { "metaType":"RealField", "id":"limit1UpperLimit", "text":"Limit1> Upper Limit", "min":"0.0", "max":"100.0", "step":"0.001", "digitals":"3", "defaultText":"1.0"},
+
+      { "metaType":"PercentageField", "id":"limit2NotExceeding", "text":"Limit2> Not exceeding probability", "min":"100.0", "max":"100.0", "defaultText":"100" },
+
+      { "metaType":"RealField", "id":"limit2UpperLimit", "text":"Limit2> Upper Limit", "min":"0.0", "max":"100.0", "step":"0.001", "digitals":"3", "defaultText":"N/A"}
+
+    ]},
+
+    <!-- Dips -->
+    { "metaType":"SetupVirtualField", "id":"dipsSet", "text":"Dips", "children":[
+      { "metaType":"VoltageField", "id":"norminalVoltageStar", "text":"Nominal Voltage Star", "defaultText":"120", "dimension":"V" },
+
+      { "metaType":"VoltageField", "id":"norminalVoltageDelta", "text":"Nominal Voltage Delta", "defaultText":"208", "dimension":"V" },
+
+      { "metaType":"PercentageField", "id":"threshold", "text":"Threshold", "min":"0.0", "max":"100", "defaultText":"90.0"},
+
+      { "metaType":"PercentageField", "id":"hysteresis", "text":"Hysteresis", "min":"0.0", "max":"100.0", "defaultText":"2.0"},
+      { "metaType":"IntegerField", "id":"allowedPerWeek", "text":"Allowed per Week", "defaultText":"20", "min":"0", "max":"1000", "step":"1" }
+
+    ]},
+
+    <!-- Swells -->
+    { "metaType":"SetupVirtualField", "id":"swellsSet", "text":"Swells", "children":[
+      { "metaType":"VoltageField", "id":"norminalVoltageStar", "text":"Nominal Voltage Star", "defaultText":"120", "dimension":"V" },
+
+      { "metaType":"VoltageField", "id":"norminalVoltageDelta", "text":"Nominal Voltage Delta", "defaultText":"208", "dimension":"V" },
+
+      { "metaType":"PercentageField", "id":"threshold", "text":"Threshold", "min":"0.0", "max":"200", "defaultText":"110.0"},
+
+      { "metaType":"PercentageField", "id":"hysteresis", "text":"Hysteresis", "min":"0.0", "max":"100.0", "defaultText":"2.0"},
+
+      { "metaType":"IntegerField", "id":"allowedPerWeek", "text":"Allowed per Week", "defaultText":"20", "min":"0", "max":"1000", "step":"1" }
+
+    ]},
+
+    <!-- Interruption -->
+    { "metaType":"SetupVirtualField", "id":"interruptionsSet", "text":"Interruptions", "children":[
+
+      { "metaType":"VoltageField", "id":"norminalVoltageStar", "text":"Nominal Voltage Star", "defaultText":"120", "dimension":"V" },
+
+      { "metaType":"VoltageField", "id":"norminalVoltageDelta", "text":"Nominal Voltage Delta", "defaultText":"208", "dimension":"V" },
+
+      { "metaType":"PercentageField", "id":"threshold", "text":"Threshold", "min":"0.0", "max":"200", "defaultText":"1.0"},
+
+      { "metaType":"PercentageField", "id":"hysteresis", "text":"Hysteresis", "min":"0.0", "max":"100.0", "defaultText":"2.0"},
+
+      { "metaType":"IntegerField", "id":"allowedPerWeek", "text":"Allowed per Week", "defaultText":"2", "min":"0", "max":"1000", "step":"1" }
+
+    ]},
+
+    <!-- Rapid V Change -->
+    { "metaType":"SetupVirtualField", "id":"rapidVChangeSet", "text":"Rapid V Change", "children":[
+
+      { "metaType":"VoltageField", "id":"nominalVoltageStar", "text":"Nominal Voltage Star", "defaultText":"120", "dimension":"V" },
+
+      { "metaType":"VoltageField", "id":"nominalVoltageDelta", "text":"Nominal Voltage Delta", "defaultText":"208", "dimension":"V" },
+
+      { "metaType":"IntegerField", "id":"allowedPerWeek", "text":"Allowed per Week", "defaultText":"70", "min":"0", "max":"1000", "step":"1" }
+
+    ]},
+
+    <!-- Unbalance -->
+    { "metaType":"SetupVirtualField", "id":"unbalanceSet", "text":"Unbalance", "children":[
+
+      { "metaType":"PercentageField", "id":"limit1NotExceeding", "text":"Limit1> Not exceeding probability", "min":"0.0", "max":"100", "defaultText":"95.0"},
+
+      { "metaType":"PercentageField", "id":"limit1Upperlimit", "text":"Limit1> Upper Limit", "min":"0.0", "max":"100.0", "defaultText":"2.0"},
+
+      { "metaType":"PercentageField", "id":"limit2NotExceeding", "text":"Limit2> Not exceeding probability", "min":"100.0", "max":"100.0", "defaultText":"100" },
+
+      { "metaType":"PercentageField", "id":"limit2Upperlimit", "text":"Limit2> Upper Limit", "min":"0.0", "max":"100.0", "defaultText":"N/A"}
+
+    ]},
+
+    <!-- Frequency -->
+    { "metaType":"SetupVirtualField", "id":"frequencySet", "text":"Frequency", "children":[
+
+      { "metaType":"FrequencyField", "id":"nominalFrequency", "text":"Nominal Frequency", "min":"60", "max":"60", "defaultText":"60", "dimension":"Hz" },
+
+      { "metaType":"PercentageField", "id":"limit1NotExceeding", "text":"Limit1> Not exceeding probability", "min":"0.0", "max":"100", "defaultText":"99.5"},
+
+      { "metaType":"PercentageField", "id":"limit1Upperlimit", "text":"Limit1> Upper Limit", "min":"0.0", "max":"100.0", "defaultText":"1.0"},
+
+      { "metaType":"PercentageField", "id":"limit1Lowerlimit", "text":"Limit1> Lower Limit", "min":"-100.0", "max":"-0.0", "defaultText":"-1.0"},
+
+      { "metaType":"PercentageField", "id":"limit2NotExceeding", "text":"Limit2> Not exceeding probability", "min":"100.0", "max":"100.0", "defaultText":"100" },
+
+      { "metaType":"PercentageField", "id":"limit2Upperlimit", "text":"Limit2> Upper Limit", "min":"0.0", "max":"100.0", "defaultText":"4.0"},
+
+      { "metaType":"PercentageField", "id":"limit2Lowerlimit", "text":"Limit2> Lower Limit", "min":"-100.0", "max":"-0.0", "defaultText":"-6.0"}
+
+    ]},
+
+    <!-- MainSignaling -->
+    { "metaType":"SetupVirtualField", "id":"mainsSignalingSet", "text":"Mains Signaling", "children":[
+
+      { "metaType":"FrequencyField", "id":"frequency1", "text":"Frequency1", "defaultText":"1350.0", "min":"70", "max":"3000", "dimension":"Hz" },
+
+      { "metaType":"PercentageField", "id":"limit1_1NotExceeding", "text":"Limit1-1> Not exceeding probability", "min":"0.0", "max":"100", "defaultText":"99.0"},
+
+      { "metaType":"PercentageField", "id":"limit1_1Upperlimit", "text":"Limit1-1> Upper Limit", "min":"0.0", "max":"100.0", "defaultText":"5.0"},
+
+      { "metaType":"PercentageField", "id":"limit1_2NotExceeding", "text":"Limit1-2> Not exceeding probability", "min":"100.0", "max":"100.0", "defaultText":"100" },
+
+      { "metaType":"PercentageField", "id":"limit1_2Upperlimit", "text":"Limit1-2> Upper Limit", "min":"0.0", "max":"100.0", "defaultText":"N/A"},
+
+      { "metaType":"FrequencyField", "id":"frequency2", "text":"Frequency2", "defaultText":"285.0", "min":"70", "max":"3000", "dimension":"Hz" },
+
+      { "metaType":"PercentageField", "id":"limit2_1NotExceeding", "text":"Limit2-1> Not exceeding probability", "min":"0.0", "max":"100", "defaultText":"99.0"},
+
+      { "metaType":"PercentageField", "id":"limit2_1Upperlimit", "text":"Limit2-1> Upper Limit", "min":"0.0", "max":"100.0", "defaultText":"9.0"},
+
+      { "metaType":"PercentageField", "id":"limit2_2NotExceeding", "text":"Limit2-2> Not exceeding probability", "defaultText":"100" },
+
+      { "metaType":"PercentageField", "id":"limit2_2Upperlimit", "text":"Limit2-2> Upper Limit", "min":"0.0", "max":"100.0", "defaultText":"N/A"}
+
+    ]}
+  ]}
+]}

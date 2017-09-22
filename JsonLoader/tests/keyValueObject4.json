@@ -1,0 +1,5 @@
+{
+	".type": "Field",
+	".id": "obj4",
+	"link":"tests/keyValueObject3.json:obj3.link"
+}

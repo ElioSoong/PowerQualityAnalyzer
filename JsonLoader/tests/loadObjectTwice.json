@@ -1,0 +1,12 @@
+﻿{
+    ".id": "root",
+    ".type": "Field",
+
+    "children": [
+        {
+            ".id": "1-1",
+            ".type": "Field",
+            "link": { ".ref": "root" }
+        }
+    ]
+}

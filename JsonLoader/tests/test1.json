@@ -1,0 +1,163 @@
+{
+    ".id": "`tr`test1.json根对象",
+    // 此处用于测试未定义的属性是否导致严重错误
+    //"index": 1,
+    ".type": "QWidget",
+    ".qchildren": [
+        {
+            ".id": "`tr`儿子对象1",
+            ".type": "QWidget"
+        },
+        {
+            ".id": "儿子对象2",
+            ".type": "QWidget",
+            "qchildren": [
+                {
+                    ".id": "`tr`孙子对象3",
+                    ".type": "QWidget"
+                }
+            ]
+        }
+    ],
+    ".objects": [
+        {
+            ".id": "testView1",
+            ".type": "View",
+            "widget": {
+                ".id": "test.typeAnonymousWidget",
+                "enabled": true
+            }
+        },
+        {
+            ".objects": [
+                {
+                    ".type": "QPushButton",
+                    ".id": "sharedButton"
+                }
+            ],
+            ".id": "testView2",
+            ".type": "View",
+            // Int类型的枚举，此时需要注册枚举所从属的类（OperationModeFlags）
+            "flags": "OperationModeFlags.CursorMode | OperationModeFlags.NavigateMode",
+            // 强制指定属性的加载顺序，可以在key中添加排序tag，例如1,2,3之类
+            "`1`widget": "test2.json",
+            "`3`icon": "monitor.png",
+            "`2`defaultButtonText": "Button3",
+            "buttons": [
+                { "text": "`tr`Button1" },
+                { "text": "Button2" },
+                {
+                    ".id": "Button3OftestView2",
+                    "text": "Button3"
+                },
+                "sharedButton",
+                "sharedButton"
+            ],
+            "viewFlags": "MyViewFlags.ShowNavigationBar|MyViewFlags.AlignRight",
+            "stringList1": [
+                "String1",
+                "String2",
+                "String3"
+            ],
+            "intList": [ 1, 2, 3 ],
+            "doubleList": [ 4, 5, 6 ],
+            "stringList2": [
+                "String4",
+                "String5",
+                "String6"
+            ],
+            "boolList": [
+                true,
+                false,
+                false
+            ],
+            "varList": [ 12, "235", 345.7 ],
+            "objectList1": [
+                {
+                    ".type": "QLabel"
+                },
+                //"`object`testView3",
+                "`object`sharedButton",
+                {
+                    ".ref": "testView1",
+                    //".id":  "testViewCopy",
+                    //".copy": true,
+                    "stringList1": [ "123","456"]
+                }
+            ],
+            "objectList2": [
+                {
+                    ".type": "QLabel"
+                },
+                //"`object`testView1",
+                "`object`sharedButton"
+            ],
+            "bool1": true,
+            "signal1": "testView3.slot1",
+            "signal3()": "testView3.slot1()",
+            "bool2": "testView3.bool1",
+            "regExp": ".*1",
+            "var": [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ],
+            "view": {
+                "name": "childViewName"
+            }
+        },
+        {
+            ".id": "testView3",
+            ".type": "View",
+            "widget": "`tr`儿子对象2",
+            "bool2": false,
+            "slot3": "testView2.signal2",
+            "buttons": [
+                { "text": "`tr`Button1@testView3" }
+            ],
+            "stringList1": [
+                "String1@testView3"
+            ],
+            "intList": [ 3 ],
+            "color": "black",
+            "dateTime": "2015-12-13",
+            "defaultButton.text": "defaultButtonTest@testView3"
+        },
+        {
+            ".id": "testView4",
+            ".type": "View",
+            // 标准枚举类型，此时不需要注册枚举所从属的类（MyViewFlags）
+            "viewFlags": "MyViewFlags.AlignLeft | ShowNavigationBar",
+            "widget": {
+                ".type": "QPushButton",
+                "text": "`property`testView2.defaultButtonText",
+                "checkable": true,
+                "clicked": "testView3.slot1"
+            },
+
+            "font": "\"微软雅黑\" 12px bold ltalic large",
+            "color": "#131313",
+            "size": "12x15",
+            // 矩形初始化方法：w=1,h=2,宽度x高度=12x15
+            "rect": "1,2,12x15",
+            // 使用ISO标准格式，注意时间前面带有T字符，另外毫秒与秒间要使用.而不是:
+            "dateTime": "2015-12-13T02:13:24.567",
+            "lineEdit": {
+                ".ref": "theLineEdit",
+                "text": "JsonLoaderModifiedMe"
+            }
+        },
+        {
+            ".ref": "testView4",
+            ".copy": true,
+            ".id": "testView5",
+            "color": "red",
+            "bool1": true,
+            "bool2": "this.bool1",
+            "widget": {
+                //".type": "QLabel",
+                ".ref": "test2.json",
+                "text": "Label2Text"
+            },
+            "view.defaultButton": {
+                "text": "123"
+            }
+        }
+    ]
+}

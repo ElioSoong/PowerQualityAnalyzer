@@ -1,0 +1,7 @@
+{
+    ".ref": "first",
+    ".qchildren": [
+    	{
+            ".ref": "second"
+        }]
+}

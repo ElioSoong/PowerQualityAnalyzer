@@ -1,0 +1,10 @@
+{
+    ".id": "`tr`test3.json默认类型的根对象",
+    //"metaType": "QLabel",
+    "qchildren": [
+        {
+            "id": "`tr`儿子对象1",
+            "metaType": "QWidget"
+        }
+    ]        
+}
