@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\gui">
+      <UniqueIdentifier>{7c517222-95dd-49f6-93c4-1cbb5984d7a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\remote">
+      <UniqueIdentifier>{58db2c1e-a6bf-40e7-b419-bba233b85fa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\storage">
+      <UniqueIdentifier>{1830c56a-ed81-4860-8f84-f18c47a9ae70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\math">
+      <UniqueIdentifier>{588237a3-8a3b-43a8-b591-e26ee8a53901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{a7b23d3f-d597-4b02-83f0-30df850cefa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui">
+      <UniqueIdentifier>{26248024-5e78-48ca-905e-80ab7472617a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\storage">
+      <UniqueIdentifier>{1adef9d0-a6d0-4896-ad0a-21f38132994a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\remote">
+      <UniqueIdentifier>{d48b8109-99e2-4523-a0d4-3d903ced84a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\math">
+      <UniqueIdentifier>{9beefe60-b2e4-4d2a-98b2-8aec06f6376b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\common">
+      <UniqueIdentifier>{76d6d140-43df-44ba-b11b-2429bec48542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Json Files">
+      <UniqueIdentifier>{94606d55-574a-4cb4-8e58-eeedd19580ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Json Files\field">
+      <UniqueIdentifier>{6831af56-8c9b-4f39-8d68-3882c8a41610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Json Files\menu">
+      <UniqueIdentifier>{7cde6568-7920-4e1c-9d4c-b942560b955c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Json Files\model">
+      <UniqueIdentifier>{32405a2c-ce68-4c8e-b88e-5de1e5d145f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Json Files\view">
+      <UniqueIdentifier>{3b0fda5d-4c39-459e-ae4f-64530c9637a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DBUSXML2CPP">
+      <UniqueIdentifier>{d5037956-334f-4ee5-8f45-f6b6c1d77d3b}</UniqueIdentifier>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{5397ccf1-bfaa-4ef1-9eeb-b96fe5a08082}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{3501641d-2fb2-46e2-a7cf-df4d7dbe2a66}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\gui\StyledListItemDelegate.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\FullKey.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\StyledItemDelegate.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\Editor.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\Editor.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\Editor.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\DigitKey.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\BatteryWidget.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\IStorage.h">
+      <Filter>Header Files\storage</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\SessionStorageItem.h">
+      <Filter>Header Files\storage</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\SetupStorageItem.h">
+      <Filter>Header Files\storage</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\SnapshotStorageItem.h">
+      <Filter>Header Files\storage</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\StorageItem.h">
+      <Filter>Header Files\storage</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\FieldTreeStorageItem.h">
+      <Filter>Header Files\storage</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\StorageThread.h">
+      <Filter>Header Files\storage</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\PacketDelegate.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\PacketView.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\KeyButton.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\MsgBoxBtn.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\digitKey.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\fullKey.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ui\mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\CustomTheme.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\softinput.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\SoftInputPanel.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\MsgBoxFrame.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\View.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\HomepageWidget.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\MainWindow.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\Application.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\SysStatusModel.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\StorageModel.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\GpsTestView.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\ClockThread.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\ObjectListModel.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\HintMsgBox.h">
+      <Filter>Header Files\gui</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\ActivityModel.h">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\TrendStorageItem.h">
+      <Filter>Header Files\storage</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\ActivityModel.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\Plugin.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\ActivityManager.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\Activity.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\FocusManager.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\common\HardwareManager.h">
+      <Filter>Header Files\common</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\common\MetaSystemHelper.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\LoopedFrameBuffer.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\PacketHeaderView.h">
+      <Filter>Header Files\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\PacketFieldModel.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_Editor.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_digitKey.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_fullKey.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_mainwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common\RealFieldIO.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\corelibrary_global.h" />
+    <ClInclude Include="src\common\IScriptable.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\gui\StyledListItemDelegate.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\FullKey.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\ActivityModel.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\StyledItemDelegate.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\DigitKey.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\BatteryWidget.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\storage\IStorage.cpp">
+      <Filter>Source Files\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\storage\SessionStorageItem.cpp">
+      <Filter>Source Files\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\storage\SetupStorageItem.cpp">
+      <Filter>Source Files\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\storage\SnapshotStorageItem.cpp">
+      <Filter>Source Files\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\storage\StorageItem.cpp">
+      <Filter>Source Files\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\storage\FieldTreeStorageItem.cpp">
+      <Filter>Source Files\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\storage\StorageThread.cpp">
+      <Filter>Source Files\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\PacketDelegate.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\PacketHeaderView.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\PacketView.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\PacketFieldModel.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\KeyButton.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\MsgBoxBtn.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\CustomTheme.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\softinput.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\SoftInputPanel.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\MsgBoxFrame.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\SysStatusModel.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\Activity.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\HomepageWidget.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\MainWindow.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\Application.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\StorageModel.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\GpsTestView.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\ClockThread.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SetupStorageItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SetupStorageItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ObjectListModel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ObjectListModel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ClockThread.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ClockThread.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SysStatusModel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SysStatusModel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_StyledListItemDelegate.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_StyledListItemDelegate.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_StyledItemDelegate.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_StyledItemDelegate.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_StorageThread.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_StorageThread.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_StorageItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_StorageItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SoftInputPanel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SoftInputPanel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_softinput.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_softinput.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SnapshotStorageItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SnapshotStorageItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SessionStorageItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SessionStorageItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PacketDelegate.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PacketDelegate.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MsgBoxFrame.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MsgBoxFrame.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MsgBoxBtn.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MsgBoxBtn.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainWindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainWindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_KeyButton.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_KeyButton.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_IStorage.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_IStorage.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_HomepageWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_HomepageWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_GpsTestView.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_GpsTestView.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_FullKey.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_FullKey.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_FieldTreeStorageItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_FieldTreeStorageItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DigitKey.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DigitKey.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CustomTheme.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CustomTheme.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_BatteryWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_BatteryWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Application.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Application.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\ObjectListModel.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_HintMsgBox.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_HintMsgBox.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gui\HintMsgBox.cpp">
+      <Filter>Source Files\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PacketView.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PacketView.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_TrendStorageItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_TrendStorageItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\storage\TrendStorageItem.cpp">
+      <Filter>Source Files\storage</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\MetaSystemHelper.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ActivityModel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ActivityModel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\Plugin.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\IScriptable.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Plugin.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Plugin.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\ActivityManager.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ActivityManager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ActivityManager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Activity.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Activity.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_FocusManager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_FocusManager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\FocusManager.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_HardwareManager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_HardwareManager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common\HardwareManager.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="json\field\global.json">
+      <Filter>Json Files\field</Filter>
+    </None>
+    <None Include="json\menu\Bar.json">
+      <Filter>Json Files\menu</Filter>
+    </None>
+    <None Include="json\menu\Event.json">
+      <Filter>Json Files\menu</Filter>
+    </None>
+    <None Include="json\menu\Meter.json">
+      <Filter>Json Files\menu</Filter>
+    </None>
+    <None Include="json\menu\Phaser.json">
+      <Filter>Json Files\menu</Filter>
+    </None>
+    <None Include="json\menu\storage.json">
+      <Filter>Json Files\menu</Filter>
+    </None>
+    <None Include="json\menu\Trend.json">
+      <Filter>Json Files\menu</Filter>
+    </None>
+    <None Include="json\menu\Wave.json">
+      <Filter>Json Files\menu</Filter>
+    </None>
+    <None Include="json\model\activityModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\BarModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\EnergeLossCalcModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\energyLossModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\energyLossProxyModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\EventListModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\FlickerModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\HarmonicModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\InverterModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\MonitorBarModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\MonitorFlickerModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\MonitorFreModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\MonitorModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\MonitorUnbalanceModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\MonitorVrmsModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\PhaserModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\PowerEnergyModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\PowerWaveModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\pqaPacketModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\RecordModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\setupModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\ShipModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\SiganlVoltagModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\SurgeCurrentModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\TransientModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\UnbalanceModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\UpDownModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\VahModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\vahSetUpProxyModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\WaveModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\view\barCursor.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\barDelegate.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\BarView.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\energyLossView.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\eventDelegate.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\homepage.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\homepageDelegate.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\meterDelegate.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\MeterView.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\MonitorBarCursor.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\MonitorBarDelegate.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\MonitorCursor.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\MonitorDelegate.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\phasorDelegate.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\PhasorView.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\setupDelegate.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\setupView.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\storageDelegate.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\storageView.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\trendDelegate.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\waveCursor.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\view\waveDelegate.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\main.json">
+      <Filter>Json Files</Filter>
+    </None>
+    <None Include="json\model\HarmonicTrendModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\view\HcRmsDelegate.json">
+      <Filter>Json Files\view</Filter>
+    </None>
+    <None Include="json\model\HcRmsModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\model\MonitorMainsSigModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+    <None Include="json\menu\MonitorBar.json">
+      <Filter>Json Files\menu</Filter>
+    </None>
+    <None Include="json\model\RmsToTrendModel.json">
+      <Filter>Json Files\model</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="src\remote\remote.xml">
+      <Filter>DBUSXML2CPP</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>

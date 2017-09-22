@@ -1,0 +1,949 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7498B21E-8698-422F-BF95-F43A91B7EBBB}</ProjectGuid>
+    <RootNamespace>PowerQualityAnalyzer</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>PowerQualityAnalyzer</PrimaryOutput>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>PowerQualityAnalyzer</PrimaryOutput>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">core</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cored</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+    <SourcePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Qt\Qt5.8.0_2013\5.8\Src\qtbase\src\corelib\itemmodels;$(QTDIR)\..\src;$(QTDIR)\..\src\qtbase;$(QTDIR)\..\src\xmlpatterns;$(QTDIR)\..\src\widgets;E:\Workspace\F280\Projects\branch_remote\src\remote\libscpi\src;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore;.\release;.;$(QTDIR)\mkspecs\win32-msvc2010;$(SolutionDir)\src;$(SolutionDir)\src\common;$(SolutionDir)\src\gui;$(SolutionDir)\src\pqa;$(SolutionDir)\src\remote;$(SolutionDir)\src\storage;$(SolutionDir)\tests;$(SolutionDir)\tests\common;.\src\gui;.\tests;.\src;.\src\common;.\tests\common;.\tests\gui;.\tests\pqa;.\ui;$(QTDIR)\include\QtSql;.\src\storage;.\src\remote;$(QTDIR)\include\QtNetwork;.\src\pqa;.\src\remote\libscpi\inc\scpi;$(QTDIR)\include\QtLocation;.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;$(SolutionDir)JsonLoader;$(SolutionDir)FieldLibrary;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;QT_SQL_LIB;QT_NETWORK_LIB;QT_LOCATION_LIB;CORELIBRARY_LIB;STORAGELIBRARY_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4100</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\Qt5Test.lib;glu32.lib;opengl32.lib;gdi32.lib;user32.lib;$(QTDIR)\lib\qtmain.lib;shell32.lib;$(QTDIR)\lib\Qt5Core.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Gui.lib;Qt5Sql.lib;Qt5Network.lib;$(QTDIR)\lib\Qt5Positioning.lib;Qt5Location.lib;$(SolutionDir)FieldLibrary\field.lib;$(SolutionDir)JsonLoader\jsonloader.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\bin;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(TargetName).dll $(ProjectDir)
+copy $(OutDir)$(TargetName).lib $(ProjectDir)
+copy $(OutDir)$(TargetName).dll $(SolutionDir)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore;.\debug;.;$(QTDIR)\mkspecs\win32-msvc2010;$(SolutionDir)\src;$(SolutionDir)\src\common;$(SolutionDir)\src\gui;$(SolutionDir)\src\pqa;$(SolutionDir)\src\remote;$(SolutionDir)\src\storage;$(SolutionDir)\tests;$(SolutionDir)\tests\common;.\src\gui;$(SolutionDir)\tests\gui;$(QTDIR)\include\QtUiTools;.\tests;.\src;.\src\common;.\tests\common;.\tests\gui;.\tests\pqa;.\ui;$(QTDIR)\include\QtSql;.\src\storage;$(SolutionDir)src\remote;$(SolutionDir)src\remote\libscpi\inc\scpi;$(SolutionDir)src\remote\libscpi\inc;$(QTDIR)\include\QtNetwork;$(SolutionDir)\tests\remote;.\src\pqa;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtLocation;.\src\remote;.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;$(SolutionDir)JsonLoader;$(SolutionDir)FieldLibrary;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;UNICODE;WIN32;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_SQL_LIB;QT_NETWORK_LIB;QT_LOCATION_LIB;CORELIBRARY_LIB;STORAGELIBRARY_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level1</WarningLevel>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <DisableSpecificWarnings>4100;4996;4189</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\Qt5Testd.lib;glu32.lib;opengl32.lib;gdi32.lib;user32.lib;$(QTDIR)\lib\qtmaind.lib;shell32.lib;$(QTDIR)\lib\Qt5Cored.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Sqld.lib;$(ProjectDir)src\remote\libscpi\lib\libscpi.lib;Qt5Networkd.lib;$(QTDIR)\lib\Qt5SerialPortd.lib;$(QTDIR)\lib\Qt5Positioningd.lib;Qt5Locationd.lib;Qt5DBus.lib;Qt5DBusd.lib;$(SolutionDir)FieldLibrary\fieldd.lib;$(SolutionDir)JsonLoader\jsonloaderd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)src\remote\libscpi\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <Profile>true</Profile>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)$(TargetName).dll $(ProjectDir)
+copy $(OutDir)$(TargetName).lib $(ProjectDir)
+copy $(OutDir)$(TargetName).pdb $(ProjectDir)
+copy $(OutDir)$(TargetName).dll $(SolutionDir)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\storage\TrendStorageItem.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing TrendStorageItem.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing TrendStorageItem.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+    </CustomBuild>
+    <ClInclude Include="GeneratedFiles\ui_digitKey.h" />
+    <ClInclude Include="GeneratedFiles\ui_Editor.h" />
+    <ClInclude Include="GeneratedFiles\ui_fullKey.h" />
+    <ClInclude Include="GeneratedFiles\ui_mainwindow.h" />
+    <ClInclude Include="resource.h" />
+    <CustomBuild Include="src\common\Application.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing Application.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing Application.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\common\ClockThread.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ClockThread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ClockThread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\common\CustomTheme.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing CustomTheme.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing CustomTheme.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\common\Activity.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing Activity.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing Activity.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\common\ActivityModel.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ActivityModel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ActivityModel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\common\ActivityManager.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ActivityManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ActivityManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\common\FocusManager.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing FocusManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing FocusManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\common\HardwareManager.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing HardwareManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing HardwareManager.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+    </CustomBuild>
+    <ClInclude Include="src\common\IScriptable.h" />
+    <ClInclude Include="src\common\LoopedFrameBuffer.h" />
+    <ClInclude Include="src\common\MetaSystemHelper.h" />
+    <CustomBuild Include="src\common\ObjectListModel.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing ObjectListModel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing ObjectListModel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <ClInclude Include="src\common\PacketFieldModel.h" />
+    <CustomBuild Include="src\common\softinput.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing softinput.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing softinput.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\common\SoftInputPanel.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing SoftInputPanel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing SoftInputPanel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\common\StorageModel.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+    </CustomBuild>
+    <CustomBuild Include="src\common\SysStatusModel.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing SysStatusModel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing SysStatusModel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\FullKey.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing FullKey.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing FullKey.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\DigitKey.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing DigitKey.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing DigitKey.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\StyledListItemDelegate.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing StyledListItemDelegate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing StyledListItemDelegate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\BatteryWidget.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing BatteryWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing BatteryWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\KeyButton.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing KeyButton.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing KeyButton.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\HomepageWidget.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing HomepageWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing HomepageWidget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\MainWindow.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing MainWindow.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing MainWindow.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\GpsTestView.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing GpsTestView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing GpsTestView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\MsgBoxBtn.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing MsgBoxBtn.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing MsgBoxBtn.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\MsgBoxFrame.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing MsgBoxFrame.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing MsgBoxFrame.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\StyledItemDelegate.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing StyledItemDelegate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing StyledItemDelegate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\PacketDelegate.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing PacketDelegate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing PacketDelegate.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\HintMsgBox.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing HintMsgBox.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing HintMsgBox.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+    </CustomBuild>
+    <CustomBuild Include="src\common\Plugin.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing Plugin.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing Plugin.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+    </CustomBuild>
+    <ClInclude Include="src\common\RealFieldIO.h" />
+    <ClInclude Include="src\corelibrary_global.h" />
+    <ClInclude Include="src\gui\PacketHeaderView.h" />
+    <CustomBuild Include="src\gui\PacketView.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing PacketView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing PacketView.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\gui\View.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\IStorage.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing IStorage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing IStorage.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\SessionStorageItem.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing SessionStorageItem.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing SessionStorageItem.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\SetupStorageItem.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing SetupStorageItem.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing SetupStorageItem.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\SnapshotStorageItem.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing SnapshotStorageItem.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing SnapshotStorageItem.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\StorageItem.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing StorageItem.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing StorageItem.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\FieldTreeStorageItem.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing FieldTreeStorageItem.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing FieldTreeStorageItem.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="src\storage\StorageThread.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing StorageThread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DNDEBUG -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\release" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I.\src\remote" "-I$(QTDIR)\include\QtNetwork" "-I.\src\pqa" "-I.\src\remote\libscpi\inc\scpi" "-I$(QTDIR)\include\QtLocation" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing StorageThread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -D_DEBUG -D_WINDOWS -DUNICODE -DWIN32 -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_SQL_LIB -DQT_NETWORK_LIB -DQT_LOCATION_LIB -DCORELIBRARY_LIB -DSTORAGELIBRARY_LIB -D_WINDLL  "-I$(QTDIR)\include" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtCore" "-I.\debug" "-I." "-I$(QTDIR)\mkspecs\win32-msvc2010" "-I$(SolutionDir)\src" "-I$(SolutionDir)\src\common" "-I$(SolutionDir)\src\gui" "-I$(SolutionDir)\src\pqa" "-I$(SolutionDir)\src\remote" "-I$(SolutionDir)\src\storage" "-I$(SolutionDir)\tests" "-I$(SolutionDir)\tests\common" "-I.\src\gui" "-I$(SolutionDir)\tests\gui" "-I$(QTDIR)\include\QtUiTools" "-I.\tests" "-I.\src" "-I.\src\common" "-I.\tests\common" "-I.\tests\gui" "-I.\tests\pqa" "-I.\ui" "-I$(QTDIR)\include\QtSql" "-I.\src\storage" "-I$(SolutionDir)src\remote" "-I$(SolutionDir)src\remote\libscpi\inc\scpi" "-I$(SolutionDir)src\remote\libscpi\inc" "-I$(QTDIR)\include\QtNetwork" "-I$(SolutionDir)\tests\remote" "-I.\src\pqa" "-I$(QTDIR)\include\QtPositioning" "-I$(QTDIR)\include\QtLocation" "-I.\src\remote" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I.\GeneratedFiles" "-I$(SolutionDir)JsonLoader" "-I$(SolutionDir)FieldLibrary" "-I$(SolutionDir)\."</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Activity.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ActivityManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ActivityModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Application.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_BatteryWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ClockThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CustomTheme.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DigitKey.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_FieldTreeStorageItem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_FocusManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_FullKey.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_GpsTestView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_HardwareManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_HintMsgBox.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_HomepageWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_IStorage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_KeyButton.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MsgBoxBtn.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MsgBoxFrame.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ObjectListModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PacketDelegate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PacketView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Plugin.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SessionStorageItem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SetupStorageItem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SnapshotStorageItem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_softinput.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SoftInputPanel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_StorageItem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_StorageThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_StyledItemDelegate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_StyledListItemDelegate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_SysStatusModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_TrendStorageItem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Activity.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ActivityManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ActivityModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Application.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_BatteryWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ClockThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CustomTheme.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DigitKey.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_FieldTreeStorageItem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_FocusManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_FullKey.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_GpsTestView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_HardwareManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_HintMsgBox.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_HomepageWidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_IStorage.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_KeyButton.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MsgBoxBtn.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MsgBoxFrame.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ObjectListModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PacketDelegate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PacketView.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Plugin.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SessionStorageItem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SetupStorageItem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SnapshotStorageItem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_softinput.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SoftInputPanel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_StorageItem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_StorageThread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_StyledItemDelegate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_StyledListItemDelegate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_SysStatusModel.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_TrendStorageItem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\common\Activity.cpp" />
+    <ClCompile Include="src\common\ActivityManager.cpp" />
+    <ClCompile Include="src\common\ActivityModel.cpp" />
+    <ClCompile Include="src\common\Application.cpp" />
+    <ClCompile Include="src\common\ClockThread.cpp" />
+    <ClCompile Include="src\common\CustomTheme.cpp" />
+    <ClCompile Include="src\common\FocusManager.cpp" />
+    <ClCompile Include="src\common\HardwareManager.cpp" />
+    <ClCompile Include="src\common\IScriptable.cpp" />
+    <ClCompile Include="src\common\MetaSystemHelper.cpp" />
+    <ClCompile Include="src\common\ObjectListModel.cpp" />
+    <ClCompile Include="src\common\PacketFieldModel.cpp" />
+    <ClCompile Include="src\common\Plugin.cpp" />
+    <ClCompile Include="src\common\softinput.cpp" />
+    <ClCompile Include="src\common\SoftInputPanel.cpp" />
+    <ClCompile Include="src\common\StorageModel.cpp" />
+    <ClCompile Include="src\common\SysStatusModel.cpp" />
+    <ClCompile Include="src\gui\BatteryWidget.cpp" />
+    <ClCompile Include="src\gui\DigitKey.cpp" />
+    <ClCompile Include="src\gui\GpsTestView.cpp" />
+    <ClCompile Include="src\gui\HintMsgBox.cpp" />
+    <ClCompile Include="src\gui\HomepageWidget.cpp" />
+    <ClCompile Include="src\gui\MainWindow.cpp" />
+    <ClCompile Include="src\gui\MsgBoxFrame.cpp" />
+    <ClCompile Include="src\gui\PacketDelegate.cpp" />
+    <ClCompile Include="src\gui\PacketHeaderView.cpp" />
+    <ClCompile Include="src\gui\PacketView.cpp" />
+    <ClCompile Include="src\gui\FullKey.cpp" />
+    <ClCompile Include="src\gui\KeyButton.cpp" />
+    <ClCompile Include="src\gui\MsgBoxBtn.cpp" />
+    <ClCompile Include="src\gui\StyledItemDelegate.cpp" />
+    <ClCompile Include="src\gui\StyledListItemDelegate.cpp" />
+    <ClCompile Include="src\storage\FieldTreeStorageItem.cpp" />
+    <ClCompile Include="src\storage\IStorage.cpp" />
+    <ClCompile Include="src\storage\SessionStorageItem.cpp" />
+    <ClCompile Include="src\storage\SetupStorageItem.cpp" />
+    <ClCompile Include="src\storage\SnapshotStorageItem.cpp" />
+    <ClCompile Include="src\storage\StorageItem.cpp" />
+    <ClCompile Include="src\storage\StorageThread.cpp" />
+    <ClCompile Include="src\storage\TrendStorageItem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="json\field\global.json" />
+    <None Include="json\main.json" />
+    <None Include="json\menu\Bar.json" />
+    <None Include="json\menu\Event.json" />
+    <None Include="json\menu\Meter.json" />
+    <None Include="json\menu\MonitorBar.json" />
+    <None Include="json\menu\Phaser.json" />
+    <None Include="json\menu\storage.json" />
+    <None Include="json\menu\Trend.json" />
+    <None Include="json\menu\Wave.json" />
+    <None Include="json\model\activityModel.json" />
+    <None Include="json\model\BarModel.json" />
+    <None Include="json\model\HcRmsModel.json" />
+    <None Include="json\model\EnergeLossCalcModel.json" />
+    <None Include="json\model\energyLossModel.json" />
+    <None Include="json\model\energyLossProxyModel.json" />
+    <None Include="json\model\EventListModel.json" />
+    <None Include="json\model\FlickerModel.json" />
+    <None Include="json\model\HarmonicModel.json" />
+    <None Include="json\model\HarmonicTrendModel.json" />
+    <None Include="json\model\InverterModel.json" />
+    <None Include="json\model\MonitorBarModel.json" />
+    <None Include="json\model\MonitorFlickerModel.json" />
+    <None Include="json\model\MonitorFreModel.json" />
+    <None Include="json\model\MonitorMainsSigModel.json" />
+    <None Include="json\model\MonitorModel.json" />
+    <None Include="json\model\MonitorUnbalanceModel.json" />
+    <None Include="json\model\MonitorVrmsModel.json" />
+    <None Include="json\model\PhaserModel.json" />
+    <None Include="json\model\PowerEnergyModel.json" />
+    <None Include="json\model\PowerWaveModel.json" />
+    <None Include="json\model\pqaPacketModel.json" />
+    <None Include="json\model\RecordModel.json" />
+    <None Include="json\model\RmsToTrendModel.json" />
+    <None Include="json\model\setupModel.json" />
+    <None Include="json\model\ShipModel.json" />
+    <None Include="json\model\SiganlVoltagModel.json" />
+    <None Include="json\model\SurgeCurrentModel.json" />
+    <None Include="json\model\TransientModel.json" />
+    <None Include="json\model\UnbalanceModel.json" />
+    <None Include="json\model\UpDownModel.json" />
+    <None Include="json\model\VahModel.json" />
+    <None Include="json\model\vahSetUpProxyModel.json" />
+    <None Include="json\model\WaveModel.json" />
+    <None Include="json\view\barCursor.json" />
+    <None Include="json\view\barDelegate.json" />
+    <None Include="json\view\BarView.json" />
+    <None Include="json\view\energyLossView.json" />
+    <None Include="json\view\eventDelegate.json" />
+    <None Include="json\view\HcRmsDelegate.json" />
+    <None Include="json\view\homepage.json" />
+    <None Include="json\view\homepageDelegate.json" />
+    <None Include="json\view\meterDelegate.json" />
+    <None Include="json\view\MeterView.json" />
+    <None Include="json\view\MonitorBarCursor.json" />
+    <None Include="json\view\MonitorBarDelegate.json" />
+    <None Include="json\view\MonitorCursor.json" />
+    <None Include="json\view\MonitorDelegate.json" />
+    <None Include="json\view\phasorDelegate.json" />
+    <None Include="json\view\PhasorView.json" />
+    <None Include="json\view\setupDelegate.json" />
+    <None Include="json\view\setupView.json" />
+    <None Include="json\view\storageDelegate.json" />
+    <None Include="json\view\storageView.json" />
+    <None Include="json\view\trendDelegate.json" />
+    <None Include="json\view\waveCursor.json" />
+    <None Include="json\view\waveDelegate.json" />
+    <CustomBuild Include="ui\Editor.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+    <CustomBuild Include="ui\digitKey.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <SubType>Designer</SubType>
+    </CustomBuild>
+    <CustomBuild Include="ui\fullKey.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+    <CustomBuild Include="ui\mainwindow.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="src\remote\remote.xml">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\qdbusxml2cpp.exe -i remote_interface.h -p :remote_interface.cpp remote.xml
+if errorlevel 1 goto VCEnd
+endlocal
+if errorlevel 1 goto VCEnd
+setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\qdbusxml2cpp.exe -i remote_adaptor.h -a :remote_adaptor.cpp remote.xml
+if errorlevel 1 goto VCEnd
+endlocal
+if errorlevel 1 goto VCEnd
+setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\qdbusxml2cpp.exe -p remote_interface.h: remote.xml
+if errorlevel 1 goto VCEnd
+endlocal
+if errorlevel 1 goto VCEnd
+setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\qdbusxml2cpp.exe -a remote_adaptor.h: remote.xml
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">DBUSXML2CPP INTERFACE SOURCE remote.xml, DBUSXML2CPP ADAPTOR SOURCE remote.xml, DBUSXML2CPP INTERFACE HEADER remote.xml, DBUSXML2CPP ADAPTOR HEADER remote.xml</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">remote_interface.cpp;remote_adaptor.cpp;remote_interface.h;remote_adaptor.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">remote.xml;%(AdditionalInputs)</AdditionalInputs>
+    </Xml>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" Qt5Version_x0020_Win32="Qt5.8" json_2field_2packetTest_1json__JSONSchema="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

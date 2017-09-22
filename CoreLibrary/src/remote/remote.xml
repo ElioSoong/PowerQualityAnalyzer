@@ -1,0 +1,151 @@
+<node>
+  <interface name="com.inno.Analyzer.remote">
+    <!-- 字段树的写操作 -->
+    <method name="writeField">
+      <arg name="path"        type="s"  direction="in"></arg>
+      <arg name="role"        type="s"  direction="in"></arg>
+      <arg name="data"        type="v"  direction="in"></arg>
+      <arg name="row"         type="i"  direction="in"></arg>
+      <arg name="col"         type="i"  direction="in"></arg>
+      <arg type="b"   direction="out"></arg>
+    </method>
+    
+    <!-- 字段树的读操作 -->
+    <method name="readField">
+      <arg name="path"          type="s"  direction="in"></arg>
+      <arg name="role"          type="s"  direction="in"></arg>
+      <arg name="row"           type="i"  direction="in"></arg>
+      <arg name="col"           type="i"  direction="in"></arg>
+      <arg type="s"   direction="out"></arg>
+    </method>
+
+    <!-- 测量控制 -->
+    <method name="requestAnalyzerStart">
+      <arg name="activityName"  type="s"  direction="in"></arg>
+      <arg name="time"          type="s"  direction="in"></arg>
+      <arg type="b"   direction="out"></arg>
+    </method>
+    
+    <method name="requestAnalyzerStop">
+      <arg type="b"   direction="out"></arg>
+    </method>
+    
+    <method name="requestAnalyzerRestart">
+      <arg name="activityName"  type="s"  direction="in"></arg>
+      <arg type="b"   direction="out"></arg>
+    </method>
+    
+    <method name="changeSyncSrcMode">
+      <arg name="mode"          type="i"  direction="in"></arg>
+      <arg name="channel"       type="i"  direction="in"></arg>
+      <arg type="b"   direction="out"></arg>
+    </method>
+
+
+    <!-- 系统操作 -->
+    <method name="requestSystemSnapshot">
+      <arg type="v"   direction="out"></arg>
+    </method>
+    
+    <method name="requestSystemReboot">
+      <arg type="b"   direction="out"></arg>
+    </method>
+
+    <method name="requestSystemShutdown">
+      <arg type="b"   direction="out"></arg>
+    </method>
+    
+    <method name="requestSystemRootLogin">
+      <arg name="code"        type="s"  dirction="in"></arg>
+      <arg type="b"   direction="out"></arg>
+    </method>
+    
+    <method name="requestSystemRootLogout">
+      <arg type="b"   direction="out"></arg>
+    </method>
+
+    <method name="requestFirmwareVersion">
+      <arg type="s"   direction="out"></arg>
+    </method>
+    
+    <method name="requestFirmwareUpgrade">
+      <arg type="b"   direction="out"></arg>
+    </method>
+    
+    <method name="requestSystemTime">
+      <arg type="s"   direction="out"></arg>
+    </method>
+    
+    <method name="requestSetSystemTime">
+      <arg name="time" type="s"></arg>
+      <arg type="b"   direction="out"></arg>
+    </method>
+
+    <method name="requestDeviceID">
+      <arg type="s"   direction="out"></arg>
+    </method>
+
+    <method name="requestGPSStatus">
+      <arg type="b"   direction="out"></arg>
+    </method>
+
+    <!-- 获取所有存储文件列表 -->
+    <method name="storageFileList">
+      <arg type="s"   direction="out"></arg>
+    </method>
+    
+    <!-- 获取存储项元素个数 -->
+    <method name="storageItemCount">
+      <arg type="i"   direction="out"></arg>
+    </method>
+
+    <!-- 获取存储项信息 -->
+    <method name="saveStorageInfo">
+      <arg name="index"   type="i"  direction="in"></arg>
+      <arg type="b"   direction="out"></arg>
+    </method>
+
+    <!-- 删除指定存储信息 -->
+    <method name="removeStorageInfo">
+      <arg name="index" type="i"  direction="in"></arg>
+      <arg type="b"   direction="out"></arg>
+    </method>
+
+    <!-- 加载存储信息 -->
+    <method name="loadStorageInfo">
+      <arg name="index" type="i"  direction="in"></arg>
+      <arg type="b"   direction="out"></arg>
+    </method>
+
+    <!-- 重命名存储文件 -->
+    <method name="renameStorageFile">
+      <arg name="index" type="i"  direction="in"></arg>
+      <arg name="name"  type="s"  direction="in"></arg>
+      <arg type="b"   direction="out"></arg>
+    </method>
+
+    <!-- 获取指定存储项的信息 -->
+    <method name="storageItemInfo">
+      <arg name="index" type="i"></arg>
+      <arg type="s"   direction="out"></arg>
+    </method>
+
+
+    <!-- 输入事件的模拟 -->
+    <method name="emulateMouse">
+      <arg name="type"        type="i"></arg>
+      <arg name="x"           type="i"></arg>
+      <arg name="y"           type="i"></arg>
+      <arg name="button"      type="i"></arg>
+    </method>
+
+    <method name="emulateKey">
+      <arg name="type"        type="i"></arg>
+      <arg name="key"         type="i"></arg>
+      <arg name="modifier"    type="i"></arg>
+    </method>
+
+    <method name="emulateTouch"></method>
+    <method name="emulateGesture"></method>
+  </interface>
+</node>

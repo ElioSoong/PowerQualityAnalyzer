@@ -1,0 +1,63 @@
+{
+  ".type": "ActivityModel",
+  ".id": "activityModel",
+  "activities": [
+    {
+      ".type": "Activity",
+      ".id": "vahActivity",
+      "name": "电压/电流/频率",
+      "icon": "resources/icon/activity/VAH.png"
+      //"mode": "Pqa.MeasureVoltageAmpereFreq",
+      //"defaultView": "meterView",
+      // "views": [
+      //   {
+      //     ".id": "meterView",
+      //     //"viewType": "F280ViewType.MeterView",
+      //     "icon": "resources/icon/view/123.png"
+      //     // "widget": {
+      //     //   ".type": "MeterView",
+      //     //   "model": "vahProxyModel",
+      //     //   "itemDelegate": "meterDelegate",
+      //     //   "view": "meterView"
+      //     // }
+      //   },
+      //   {
+      //     //".type": "F280View",
+      //     ".id": "trendView",
+      //     "subTitle": "Trend",
+      //     "icon": "resources/icon/view/trend.png"
+      //     //"viewType": "F280ViewType.TrendView"
+      //     // "verticalCursor": "json/view/waveCursor.json",
+      //     // "contextMenu": "json/menu/Trend.json",
+      //     // "widget": {
+      //     //   ".type": "TrendView",
+      //     //   "model": "vahTrendProxyModel",
+      //     //   "itemDelegate": "json/view/trendDelegate.json",
+      //     //   "view": "trendView"
+      //     // }
+      //   }
+      // ],
+      // "storageItems": [
+      // ]
+    },
+    {
+      ".type": "Activity",
+      ".id": "invertorActivity",
+      "name": "逆变器效率",
+      "icon": "resources/icon/activity/invertor.png"
+      //"mode": "Pqa.MeasureInverter",
+      //"defaultView": "meterView",
+      // "views": [
+      // ],
+      // "storageItems": [
+      // ],
+      // "privateConfig": [
+      //   // {
+      //   //   // "path": "/sys/setup/functionSet/wiring",
+      //   //   // "data": "Power Inverter",
+      //   //   // "role": "IField.FieldDisplayRole"
+      //   // }
+      // ]
+    }
+  ]
+}

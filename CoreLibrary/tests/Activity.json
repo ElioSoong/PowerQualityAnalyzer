@@ -1,0 +1,7 @@
+{
+  ".type": "Activity",
+  ".id": "activity",
+  "configItems":[
+      {".type":"ConfigItem", "path":"/pa/packet/Basic/U/RMS", "data":456, "role":0}
+  ]
+}
